@@ -1,0 +1,30 @@
+
+@import './reset.css';
+@import './variables.css';
+
+/* topbar */
+
+.topbar-text {
+    font-family: var(--montsrat);
+    font-weight: 500;
+}
+
+.cash {
+padding: 0;
+font-weight: 400;
+}
+
+.flag.dropdown-menu.show {
+    /* top: 50% !important; */
+    left: -50px !important;
+    min-width: 20%;
+    transition: all 0.3s step-start;
+   
+}
+
+.cash.dropdown-menu.show {
+    /* top: 50% !important; */
+    left: -10px !important;
+    min-width: 20%;
+   
+}
