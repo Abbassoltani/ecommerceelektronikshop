@@ -14,17 +14,17 @@ function Topbar() {
                            <div className="languge ">
                             <ul className="d-flex">
                                 <li className='d-flex gap-2 dropdown position-relative'>
-                                    <span class="fi fi-de"></span>
+                                    <span className="fi fi-de"></span>
                                     <a href="#" className="nav-link dropdown-toggle" id='dropdownMent' aria-expanded='false'
                                     role='button' data-bs-toggle='dropdown'
                                     >Deutsch</a>
                                     <ul className="flag dropdown-menu position-absolute" id='dropdownMenu'>
-                                        <li className="dropdown-item"><span class="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span class="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span class="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item">  <span class="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span class="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span class="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item"><span className="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item"><span className="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item"><span className="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item">  <span className="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item"><span className="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item"><span className="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
                                
                                     </ul>
                                 </li>

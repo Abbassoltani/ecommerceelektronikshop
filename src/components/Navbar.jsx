@@ -29,7 +29,7 @@ function Navbar() {
                                 </div>
                                 <div className="col-8 ">
                                     <div className="input-box position-relative overflow-hidden ">
-                                        <label className='position-absolute end-0 translate-middle-y top-50  ' ><i class="ri-search-line"></i></label>
+                                        <label className='position-absolute end-0 translate-middle-y top-50  ' ><i className="ri-search-line"></i></label>
                                         <input type="text" className="form-control  border-0" placeholder='Search product hier ...' />
                                     </div>
 
@@ -41,16 +41,16 @@ function Navbar() {
                         <div className="col-lg-3">
                             <div className="navbar-icon-wrapper mt-4 justify-content-center  d-flex gap-4 justify-content-center align-items-center">
                                 <div className="navbar-icon-item">
-                                    <i class="ri-user-line"></i>
+                                    <i className="ri-user-line"></i>
                                 </div>
 
                                 <div className="navbar-icon-item position-relative">
-                                    <i class="ri-heart-line"></i>
+                                    <i className="ri-heart-line"></i>
                                     <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">0</span>
                                 </div>
 
                                 <div className="navbar-icon-item position-relative ">
-                                    <i class="ri-shopping-basket-line "></i>
+                                    <i className="ri-shopping-basket-line "></i>
                                     <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">0</span>
 
                                 </div>
@@ -80,7 +80,7 @@ function Navbar() {
                     aria-label='toggle navigation'
                     >
 
-                    <i class="ri-menu-line"></i>
+                    <i className="ri-menu-line"></i>
                 </button>
 
                 <div className="navbar-collapse collapse " id='navbarNav'>
