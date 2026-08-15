@@ -1,24 +1,31 @@
 
-import React from 'react'
-import { Swiper , SwiperSlide } from 'swiper/react'
-import { Navigation , Autoplay , EffectFade } from 'swiper/modules'
+import React, { useState } from 'react'
+import Banner from '../components/Banner'
+
+import ProductsCard from '../components/ProductsCard'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
+
 function Home() {
+
+
+
   return (
     <>
-     <header className="header ">
-   
+      <header className="header ">
+
         <Swiper
-          modules={[Navigation , EffectFade , Autoplay]}
+          modules={[Navigation, EffectFade, Autoplay]}
           effect='fade'
           spaceBetween={10}
           slidesPerView={1}
-        
+
           autoplay={{
-            delay:3000,
-            disableOnInteraction:false
+            delay: 3000,
+            disableOnInteraction: false
           }}
         >
           <SwiperSlide>
@@ -30,7 +37,7 @@ function Home() {
                   <h1>Xiaomi PAD 5, 11-inch 128GB, Pearl White</h1>
                   <span className="hero-offer">Limited time offer!</span>
                   <button className='btn-button'>Learn More <i class="ri-arrow-right-s-line"></i> </button>
-               
+
                 </div>
               </div>
             </div>
@@ -46,7 +53,7 @@ function Home() {
                   <h1>PDP Wired Controlle For Xbox One</h1>
                   <span className="hero-offer">Best Deal offer!</span>
                   <button className='btn-button'>Learn More <i class="ri-arrow-right-s-line"></i> </button>
-               
+
                 </div>
               </div>
             </div>
@@ -57,8 +64,23 @@ function Home() {
 
         </Swiper>
 
-   
-     </header>
+
+      </header>
+
+      <div className="banner-section container-fluid">
+
+        <div className="container">
+
+          <div className="row ">
+         
+
+            <Banner />
+            <Banner />
+            <Banner />
+          </div>
+        </div>
+      </div>
+      <ProductsCard />
     </>
   )
 }
