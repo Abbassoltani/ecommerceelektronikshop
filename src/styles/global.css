@@ -124,7 +124,7 @@ select.form-select:focus {
 .heroWrapper {
     display: flex;
     flex-direction: column;
-   position: relative;
+    position: relative;
     padding: 0 10%;
     height: 100%;
 }
@@ -168,7 +168,7 @@ select.form-select:focus {
 }
 
 .swiper-slide-active .hero .btn-button {
-    display: block;
+    /* display: block; */
     margin: 30px 0;
     padding: 15px 25px;
     border-radius: 40px;
@@ -208,11 +208,46 @@ select.form-select:focus {
 
 
 
+@media (max-width:990px) {
+    .hero-content h4 {
+        font-size: 1.7rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        padding-right: 40%;
+    }
+
+    .hero-content span.hero-offer {
+        font-size: 1.8rem;
+    }
+
+}
+
+ @media (max-width:576px){
+        .hero-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+        padding-right: 40%;
+    }
+
+    .hero-content span.hero-offer {
+        font-size: 1.3rem;
+    }
+
+ }
+
+
+
+
 /* Banner */
 
 .banner-section {
-    
-padding: 15px 0;
+
+    padding: 15px 0;
 }
 
 .banner-content span {
@@ -224,28 +259,29 @@ padding: 15px 0;
     font-size: 1.3rem;
     margin-top: 15px;
 }
+
 .banner .card {
     background-color: var(--bg-color);
 }
 
-.btn-button{
-    border-radius: 30px ;
+.btn-button {
+    border-radius: 30px;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-      padding: 5px 15px;
-      line-height: 0;
+    padding: 5px 15px;
+    line-height: 0;
 }
 
-.btn-button i{
-    border-radius: 100% ;
+.btn-button i {
+    border-radius: 100%;
     width: 20px;
     height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-   margin: 0 5px;
+    margin: 0 5px;
     background-color: red !important;
     color: var(--white-color);
 }
@@ -259,15 +295,15 @@ padding: 15px 0;
     transform: scale(1.2);
 }
 
-.banner-col:nth-child(1) .banner{
+.banner-col:nth-child(1) .banner {
     background-color: var(--bg-color);
 }
 
-.banner-col:nth-child(2) .banner{
+.banner-col:nth-child(2) .banner {
     background-color: rgb(247, 239, 226);
 }
 
-.banner-col:nth-child(3) .banner{
+.banner-col:nth-child(3) .banner {
     background-color: rgb(200, 241, 243);
 }
 
@@ -279,14 +315,143 @@ padding: 15px 0;
 
 
 .product-card-h3 {
-   display: '-webkit-box';
-   -webkit-line-clamp: 9;
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   min-height: 1.8;
+    display: '-webkit-box';
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 1.8;
 }
 
 .btn-wrapper {
-display: flex;
-justify-content: end;
+    display: flex;
+    justify-content: end;
+}
+
+.card-img-top {
+  
+    transition: all 0.3s linear;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}
+.card-body .card-title {
+    font-family: var(--roboto);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.product-card-h3 {
+    font-family: var(--roboto);
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+
+.cart-star {
+    color: orange;
+    font-size: 25px;
+    margin-top: -20px;
+
+}
+
+.cart-star p {
+    color: var(--primary-color);
+}
+
+.card-price {
+    color:rgb(6, 131, 209);
+    font-size: 25px;
+    font-family: var(--roboto);
+    margin-top: -20px;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-badge {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(40px);
+    transition: all 0.3s linear;
+
+    
+    
+}
+
+.card:hover .card-badge{
+    transform: translateX(0);
+
+}
+
+.card:hover .card-badge i:hover{
+    color: var(--secondary-color);
+    
+
+}
+
+
+/* info Section */
+.info {
+
+
+    height: 400px;
+    display: flex;
+
+
+}
+
+.info .container {
+    background-image: url('./../../public/assets/banner02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.info-content {
+    padding-right: 50%;
+    padding-left: 5%;
+}
+
+.info p {
+    font-family: var(--roboto);
+    font-size: 1.3rem;
+    color: var(--white-color);
+}
+
+
+
+
+/* Footer  */
+
+.footer-span i {
+    font-size: 50px;
+    color: var(--white-color);
+}
+
+.footer-top {
+    background-color: var(--secondary-color);
+}
+
+.footer-left > * {
+    color: var(--white-color);
+    
+}
+
+.footer-left h5 {
+    font-family: var(--roboto);
+   
+    
+}
+
+.footer-left p{
+    font-family: var(--montsrat);
+   
+    
 }

@@ -22,6 +22,8 @@ function ProductsCard() {
         <>
             <div className="product-card py-4">
                 <div className="container">
+     
+        <hr />
                     <div className="row g-4 ">
 
                         {/* left */}
@@ -37,9 +39,9 @@ function ProductsCard() {
                         <div className="col-12 col-md-9 d-flex flex-column gap-3">
                             <div className="product-category d-flex justify-content-center border-bottom">
                                 <ul className="d-flex justify-content-between gap-5">
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
+                                    <li>MONITOR</li>
+                                    <li>CPU</li>
+                                    <li>GAME</li>
                                 </ul>
                             </div>
 
@@ -68,21 +70,35 @@ function ProductsCard() {
              <SwiperSlide  className='h-100 py-4'>
 
 
-                                    <div className="card my-1 h-100 ">
-                                        <img src={product.image} alt='' className='card-img-top bg-body-secondary mb-5  py-2' style={{ objectFit: 'contain', height: '180px' }} 
+                                    <div className="card my-1 h-100 position-relative">
+                                        <img src={product.image} alt='' className='card-img-top   ' style={{ objectFit: 'contain', height: '230px' }} 
                                         onError={(e)=>{
                                             e.currentTarget.src='./../../public/noimage.png'
                                         }}
                                         />
                                         <div className="card-body d-flex flex-column justify-content-between  gap-1" >
-                                            <span className="card-title fs-3  my-0">{product.name} </span>
-                                            <div className="product-content d-flex flex-column justify-content-between">
-                                            <h3 className='product-card-h3 fs-4 my-0'>{product.model}</h3>
-                                            <Star price={product.price}/>
-                                            <span className="card-text fw-bold fs-4">Price :{product.price} $</span>
-                                            </div>
+                                            <span className="card-title  text-muted  ">{product.name} </span>
+                                            <h3 className='product-card-h3  '>{product.model}</h3>
+                                            <span className='cart-star d-flex'>
+                                            <Star  price={product.price}/>
+                                            <p className='mx-2'> ({product.reviews})</p>
+                                           
+                                            
+
+                                            </span>
+                                            <span className="card-price fw-bold">Price :{product.price.toFixed(2)} $</span>
                                             <button className="btn btn-success">Shop me</button>
                                         </div>
+
+                                    <div className="card-badge position-absolute  fs-3">
+                                        <i class="ri-poker-hearts-line"></i>
+                                        <i class="ri-bar-chart-grouped-line"></i>
+                                        <i class="ri-eye-line"></i>
+                                        <i class="bi bi-cart"></i>
+
+
+
+                                    </div>
                                     </div>
 
                                 </SwiperSlide>
