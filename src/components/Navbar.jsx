@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -8,7 +9,7 @@ function Navbar() {
                     <div className="row w-100 justify-content-between align-items-center ">
                         <div className="col-lg-3">
                             <div className="nav-brand d-flex justify-content-center">
-                                <a href="#" className="navbar-brand">SHOPIFY</a>
+                                <Link to="/" className="navbar-brand">SHOPIFY</Link>
                             </div>
                         </div>
 

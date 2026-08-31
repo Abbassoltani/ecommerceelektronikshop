@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -123,7 +124,7 @@ function ProductsCard() {
 
                     </div>
                                     <div className="btn-wrapper">
-                            <button className="btn btn-warning d-flex product-btn ">All Item</button>
+                            <button className="btn btn-warning d-flex product-btn "><Link to='/products'>All Item</Link></button>
 
                                     </div>
                 </div>
