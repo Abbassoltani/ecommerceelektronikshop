@@ -10,7 +10,7 @@ function Breadcrumb() {
                 <i className="fas fa-home breadcrumb__home-icon"></i>
                 <ol>
                     <li className='breadcrumb-item'><Link to='/'>Home</Link> </li>
-                    <li className='breadcrumb-item'><Link to='/'>Product</Link> </li>
+                    <li className='breadcrumb-item'><Link to=''>Product</Link> </li>
                 </ol>
             </div>
         </div>

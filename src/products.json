@@ -1439,7 +1439,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/keyboard/keyboard1.png",
+      "image": "./../public/assets/products/keybord/keyboard1.png",
       "description": "RGB Mechanical K1 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1462,7 +1462,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/keyboard/keyboard2.png",
+      "image": "./../public/assets/products/keybord/keyboard2.png",
       "description": "Compact Mechanical K2 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1485,7 +1485,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/keyboard/keyboard3.png",
+      "image": "./../public/assets/products/keybord/keyboard3.png",
       "description": "Gaming RGB K3 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1508,7 +1508,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/keyboard/keyboard4.png",
+      "image": "./../public/assets/products/keybord/keyboard4.png",
       "description": "Office Keyboard K4 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1531,7 +1531,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard5.png",
+      "image": "./../public/assets/products/keybord/keyboard5.png",
       "description": "Wireless Slim K5 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1554,7 +1554,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard6.png",
+      "image": "./../public/assets/products/keybord/keyboard6.png",
       "description": "Pro Mechanical K6 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1577,7 +1577,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard7.png",
+      "image": "./../public/assets/products/keybord/keyboard7.png",
       "description": "Battle RGB K7 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1600,7 +1600,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard8.png",
+      "image": "./../public/assets/products/keybord/keyboard8.png",
       "description": "Mini Gaming K8 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1623,7 +1623,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard9.png",
+      "image": "./../public/assets/products/keybord/keyboard9.png",
       "description": "Ergo Wireless K9 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1646,7 +1646,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard10.png",
+      "image": "./../public/assets/products/keybord/keyboard10.png",
       "description": "Mechanical Pro K10 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1669,7 +1669,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard11.png",
+      "image": "./../public/assets/products/keybord/keyboard11.png",
       "description": "RGB Gamer K11 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1692,7 +1692,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard12.png",
+      "image": "./../public/assets/products/keybord/keyboard12.png",
       "description": "White Compact K12 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1715,7 +1715,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard13.png",
+      "image": "./../public/assets/products/keybord/keyboard13.png",
       "description": "Retro Mechanical K13 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1738,7 +1738,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard14.png",
+      "image": "./../public/assets/products/keybord/keyboard14.png",
       "description": "Creator Keyboard K14 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -1761,7 +1761,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/keyboard/keyboard15.png",
+      "image": "./../public/assets/products/keybord/keyboard15.png",
       "description": "Ultimate Gaming K15 is a practical keyboard product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "keyboard",
@@ -2129,7 +2129,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/monitor/monitor1.png",
+      "image": "./../public/assets/products/monitor/monitor1.jpg",
       "description": "Vision 22F Monitor is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2152,7 +2152,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/monitor/monitor2.png",
+      "image": "./../public/assets/products/monitor/monitor2.jpg",
       "description": "Vision 24F Monitor is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2175,7 +2175,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/monitor/monitor3.png",
+      "image": "./../public/assets/products/monitor/monitor3.jpg",
       "description": "ProView 24G Monitor is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2198,7 +2198,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/monitor/monitor4.png",
+      "image": "./../public/assets/products/monitor/monitor4.jpg",
       "description": "GameVision 27Q is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2221,7 +2221,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor5.png",
+      "image": "./../public/assets/products/monitor/monitor5.jpg",
       "description": "UltraView 27U is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2244,7 +2244,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor6.png",
+      "image": "./../public/assets/products/monitor/monitor6.jpg",
       "description": "Office 24IPS is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2267,7 +2267,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor7.png",
+      "image": "./../public/assets/products/monitor/monitor7.jpg",
       "description": "Gaming 27R is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2290,7 +2290,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor8.png",
+      "image": "./../public/assets/products/monitor/monitor8.jpg",
       "description": "Curved 32G is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2313,7 +2313,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor9.png",
+      "image": "./../public/assets/products/monitor/monitor9.jpg",
       "description": "Creator 27C is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2336,7 +2336,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor10.png",
+      "image": "./../public/assets/products/monitor/monitor10.jpg",
       "description": "UltraWide 34W is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2359,7 +2359,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor11.png",
+      "image": "./../public/assets/products/monitor/monitor11.jpg",
       "description": "Essential 24E is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2382,7 +2382,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor12.png",
+      "image": "./../public/assets/products/monitor/monitor12.jpg",
       "description": "Gaming 24X is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2405,7 +2405,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor13.png",
+      "image": "./../public/assets/products/monitor/monitor13.jpg",
       "description": "Pro 27P is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2428,7 +2428,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor14.png",
+      "image": "./../public/assets/products/monitor/monitor14.jpg",
       "description": "Office 27IPS is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2451,7 +2451,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/monitor/monitor15.png",
+      "image": "./../public/assets/products/monitor/monitor15.jpg",
       "description": "Ultimate Gaming 32U is a practical monitor product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "monitor",
@@ -2474,7 +2474,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mouse/mouse1.png",
+      "image": "./../public/assets/products/mouse/mouse1.jpg",
       "description": "Basic Mouse M1 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2497,7 +2497,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mouse/mouse2.png",
+      "image": "./../public/assets/products/mouse/mouse2.jpg",
       "description": "Office Mouse M2 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2520,7 +2520,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mouse/mouse3.png",
+      "image": "./../public/assets/products/mouse/mouse3.jpg",
       "description": "Gaming Mouse G3 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2543,7 +2543,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mouse/mouse4.png",
+      "image": "./../public/assets/products/mouse/mouse4.jpg",
       "description": "RGB Gaming G4 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2566,7 +2566,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse5.png",
+      "image": "./../public/assets/products/mouse/mouse5.jpg",
       "description": "Wireless Mouse W5 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2589,7 +2589,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse6.png",
+      "image": "./../public/assets/products/mouse/mouse6.jpg",
       "description": "Pro Gaming G6 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2612,7 +2612,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse7.png",
+      "image": "./../public/assets/products/mouse/mouse7.jpg",
       "description": "Ergo Mouse E7 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2635,7 +2635,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse8.png",
+      "image": "./../public/assets/products/mouse/mouse8.jpg",
       "description": "Lightweight Gaming L8 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2658,7 +2658,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse9.png",
+      "image": "./../public/assets/products/mouse/mouse9.jpg",
       "description": "Silent Office S9 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2681,7 +2681,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse10.png",
+      "image": "./../public/assets/products/mouse/mouse10.jpg",
       "description": "RGB Pro G10 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2704,7 +2704,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse11.png",
+      "image": "./../public/assets/products/mouse/mouse11.jpg",
       "description": "Compact Mouse C11 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2727,7 +2727,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse12.png",
+      "image": "./../public/assets/products/mouse/mouse12.jpg",
       "description": "Creator Mouse C12 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2750,7 +2750,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse13.png",
+      "image": "./../public/assets/products/mouse/mouse13.jpg",
       "description": "Battle Mouse B13 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2773,7 +2773,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse14.png",
+      "image": "./../public/assets/products/mouse/mouse14.jpg",
       "description": "UltraLight U14 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
@@ -2796,7 +2796,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mouse/mouse15.png",
+      "image": "./../public/assets/products/mouse/mouse15.jpg",
       "description": "Elite Gaming E15 is a practical mouse product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mouse",
