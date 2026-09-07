@@ -580,7 +580,7 @@ background-position: 100% 100%;
     top: 20px;
     right: 20px;
     font-size: 15px;
-    padding: 5px;
+    /* padding: 5px; */
     background-color: gray;
 
 }
@@ -698,3 +698,12 @@ border-radius: 5px;
    
 }
 
+.card-modal-add-lager.empty {
+    background-color: rgb(241, 64, 5) !important;
+color: var(--white-color);    
+    
+}
+
+/* .card-modal-add-lager.empty i{
+color: var(--white-color);    
+} */
