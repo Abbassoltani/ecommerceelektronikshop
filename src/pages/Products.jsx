@@ -21,6 +21,24 @@ function Products() {
   }
 
 
+  const addToWishlist =()=>{
+    const existing =JSON.parse(localStorage.getItem('wishlist')) || []
+    const alreadyinWishlist = existing.find(item => item.id === modalwindow.id)
+
+        if(!alreadyinWishlist){
+          const wishlist = {...modalwindow , quantity:1}
+          const updateWishlist = [...existing,wishlist]
+
+          localStorage.setItem('wishlist' , JSON.stringify(updateWishlist))
+          toast.success('your Product is adding to your wishlist')
+        }else {
+          toast.warning('the product is added ')
+        }
+
+
+  }
+
+
 
 
 
