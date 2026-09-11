@@ -9,8 +9,32 @@ function Products() {
   const [modalwindow, setModalwindow] = useState({})
 
   const [wishlistItem, setWishlistItem] = useState({})
-
   const [category, setCategory] = useState('All Category')
+  const [brand , setBrand]=useState('All Brand')
+  const [sorting , setSorting]=useState('Popularity')
+
+
+
+
+
+  const categorySort=[...new Set(products.map(item => item.category))]
+  const categoryFilter=category === 'All Category' ? products
+  :products.filter(item => item.category === category)
+
+  const categortyBrand=[...new Set(categoryFilter.map(item => item.brand))]
+  const categoryBrandFilter=brand === 'All Brand'? categoryFilter 
+  :categoryFilter.filter(item => item.brand === brand)
+
+
+  const productSorting=[...categoryFilter]
+
+  if(sorting === 'low'){
+    productSorting.sort((a,b)=>a.price - b.price)
+  }else if (sorting === 'high'){
+    productSorting.sort((a,b)=>b.price - a.price)
+  }else {
+    categoryFilter
+  }
 
 
 
@@ -63,21 +87,30 @@ function Products() {
                 <i class="bi bi-sliders2 fs-2 mx-2"></i>
                 <span className='d-none d-lg-flex'>Filter :</span>
               </div>
-              <select name="" id="product-select-category" className='border border-1 p-2' >
+              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e)=>{
+                setCategory(e.target.value)
+                setBrand('All Brand')
+              }} >
                   <option value='All Category'>All Category</option>
+                  {categorySort.map(item => (
+                    <option value={item}>{item}</option>
+
+                  ))}
 
               
-                  <option value=''>item</option>
 
            
 
 
               </select>
 
-              <select name="" id="product-select-category" className='border border-1 p-2 d-xs-flex' >
+              <select name="" id="product-select-category" className='border border-1 p-2 d-xs-flex' value={brand} onChange={(e)=>setBrand(e.target.value)} >
                 <option value="All Brand">All Brand</option>
+                {categortyBrand.map(item => (
+
+                  <option value={item}>{item}</option>
+                ))}
             
-                  <option value=''>item</option>
 
             
               </select>
@@ -90,8 +123,10 @@ function Products() {
 
               <span className='d-none d-lg-flex'>Sort by :</span>
 
-              <select name="" id="product-select-category" className='border border-1 p-2'>
-                <option value="-1">Popularity</option>
+              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e)=>setSorting(e.target.value)}>
+                <option value="popularity">Popularity</option>
+                <option value="low">Price: Low</option>
+                <option value="high">Price : High</option>
 
               </select>
 
@@ -111,7 +146,7 @@ function Products() {
             <div className="row  justify-content-center g-3">
 
 
-              {products.map(product => (
+              {productSorting.map(product => (
                 <>
 
 
@@ -128,6 +163,7 @@ function Products() {
                           <Star price={product.price} />
 
                         </span>
+                        <h5>Price: <span>{product.price}</span></h5>
                       </div>
                       <button className="btn btn-success d-flex justify-content-center">Shop Now</button>
 
