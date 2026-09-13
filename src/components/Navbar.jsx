@@ -51,7 +51,9 @@ function Navbar() {
                                 </div>
 
                                 <div className="navbar-icon-item position-relative ">
+                                    <Link to='/cart'>
                                     <i className="ri-shopping-basket-line "></i>
+                                    </Link>
                                     <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">0</span>
 
                                 </div>

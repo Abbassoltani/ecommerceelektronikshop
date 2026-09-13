@@ -5,7 +5,6 @@ import Breadcrumb from '../components/BroadCamp'
 import Star from '../components/Star'
 import { toast, ToastContainer } from 'react-toastify'
 function Products() {
-  const [allProduct, setAllProduct] = useState(products)
   const [modalwindow, setModalwindow] = useState({})
 
   const [wishlistItem, setWishlistItem] = useState({})
@@ -73,7 +72,7 @@ function Products() {
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb page='Product'/>
       <ToastContainer
         position='top-center'
         autoClose={2000}
@@ -130,10 +129,10 @@ function Products() {
 
               </select>
 
-              <div className="product-category-left-icon fs-4 d-flex gap-2">
+              {/* <div className="product-category-left-icon fs-4 d-flex gap-2">
                 <i className="ri-grid-fill"></i>
                 <i className="ri-list-check"></i>
-              </div>
+              </div> */}
 
 
 
