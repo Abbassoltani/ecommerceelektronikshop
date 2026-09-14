@@ -92,10 +92,10 @@ function ProductsCard() {
                                         </div>
 
                                     <div className="card-badge position-absolute  fs-3">
-                                        <i class="ri-poker-hearts-line"></i>
-                                        <i class="ri-bar-chart-grouped-line"></i>
-                                        <i class="ri-eye-line"></i>
-                                        <i class="bi bi-cart"></i>
+                                        <i className="ri-poker-hearts-line"></i>
+                                        <i className="ri-bar-chart-grouped-line"></i>
+                                        <i className="ri-eye-line"></i>
+                                        <i className="bi bi-cart"></i>
 
 
 

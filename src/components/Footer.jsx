@@ -14,7 +14,7 @@ function Footer() {
                             <div className="col-12 col-md-5">
                                 <div className="row justify-content-center align-items-center g-1 ">
                                     <div className="col-12 col-md-2 text-center text-md-start">
-                                        <span className='footer-span'><i class="bi bi-envelope-paper"></i></span>
+                                        <span className='footer-span'><i className="bi bi-envelope-paper"></i></span>
                                     </div>
                                     <div className="col-12 col-md-10 mt-3 footer-left">
                                         <h5 className=' text-center text-md-start'>Sign up for our email update.</h5>
@@ -62,10 +62,10 @@ function Footer() {
                                 <span className="footer-bottom-email">abbassoltani@gmail.com</span>
 
                                 <div className="footer-part1-icon">
-                                    <i class="ri-facebook-line"></i>
-                                    <i class="ri-twitter-line"></i>
-                                    <i class="ri-instagram-line"></i>
-                                    <i class="ri-whatsapp-line"></i>
+                                    <i className="ri-facebook-line"></i>
+                                    <i className="ri-twitter-line"></i>
+                                    <i className="ri-instagram-line"></i>
+                                    <i className="ri-whatsapp-line"></i>
                                 </div>
                             </div>
 
