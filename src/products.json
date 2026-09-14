@@ -57,7 +57,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/cpu/cpu1.png",
+      "image": "/assets/products/cpu/cpu1.png",
       "description": "Intel Core i3-10100 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -80,7 +80,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/cpu/cpu2.png",
+      "image": "/assets/products/cpu/cpu2.png",
       "description": "Intel Core i3-12100 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -103,7 +103,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/cpu/cpu3.png",
+      "image": "/assets/products/cpu/cpu3.png",
       "description": "Intel Core i5-10400 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -126,7 +126,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/cpu/cpu4.png",
+      "image": "/assets/products/cpu/cpu4.png",
       "description": "Intel Core i5-12400 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -149,7 +149,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu5.png",
+      "image": "/assets/products/cpu/cpu5.png",
       "description": "Intel Core i5-13400 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -172,7 +172,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu6.png",
+      "image": "/assets/products/cpu/cpu6.png",
       "description": "Intel Core i7-10700 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -195,7 +195,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu7.png",
+      "image": "/assets/products/cpu/cpu7.png",
       "description": "Intel Core i7-11700 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -218,7 +218,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu8.png",
+      "image": "/assets/products/cpu/cpu8.png",
       "description": "Intel Core i7-12700 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -241,7 +241,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu9.png",
+      "image": "/assets/products/cpu/cpu9.png",
       "description": "Intel Core i9-10900K is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -264,7 +264,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu10.png",
+      "image": "/assets/products/cpu/cpu10.png",
       "description": "Intel Core i9-11900K is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -287,7 +287,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu11.png",
+      "image": "/assets/products/cpu/cpu11.png",
       "description": "Intel Core i5-11400 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -310,7 +310,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu12.png",
+      "image": "/assets/products/cpu/cpu12.png",
       "description": "Intel Core i5-12600K is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -333,7 +333,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu13.png",
+      "image": "/assets/products/cpu/cpu13.png",
       "description": "Intel Core i7-13700K is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -356,7 +356,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu14.png",
+      "image": "/assets/products/cpu/cpu14.png",
       "description": "Intel Core i9-12900K is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -379,7 +379,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/cpu/cpu15.png",
+      "image": "/assets/products/cpu/cpu15.png",
       "description": "Intel Pentium G3220 is a practical cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "cpu",
@@ -402,7 +402,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/fan-cpu/fancpu1.png",
+      "image": "/assets/products/fan-cpu/fancpu1.png",
       "description": "Intel Stock Cooler 95W is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -425,7 +425,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/fan-cpu/fancpu2.png",
+      "image": "/assets/products/fan-cpu/fancpu2.png",
       "description": "Intel Stock Cooler 65W is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -448,7 +448,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/fan-cpu/fancpu3.png",
+      "image": "/assets/products/fan-cpu/fancpu3.png",
       "description": "Arctic Alpine 12 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -471,7 +471,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/fan-cpu/fancpu4.png",
+      "image": "/assets/products/fan-cpu/fancpu4.png",
       "description": "Cooler Master Hyper 212 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -494,7 +494,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu5.png",
+      "image": "/assets/products/fan-cpu/fancpu5.png",
       "description": "DeepCool AG400 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -517,7 +517,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu6.png",
+      "image": "/assets/products/fan-cpu/fancpu6.png",
       "description": "DeepCool AK400 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -540,7 +540,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu7.png",
+      "image": "/assets/products/fan-cpu/fancpu7.png",
       "description": "DeepCool AK620 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -563,7 +563,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu8.png",
+      "image": "/assets/products/fan-cpu/fancpu8.png",
       "description": "Noctua NH-U12S is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -586,7 +586,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu9.png",
+      "image": "/assets/products/fan-cpu/fancpu9.png",
       "description": "Noctua NH-D15 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -609,7 +609,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu10.png",
+      "image": "/assets/products/fan-cpu/fancpu10.png",
       "description": "be quiet! Pure Rock 2 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -632,7 +632,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu11.png",
+      "image": "/assets/products/fan-cpu/fancpu11.png",
       "description": "Thermalright Assassin X is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -655,7 +655,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu12.png",
+      "image": "/assets/products/fan-cpu/fancpu12.png",
       "description": "ID-Cooling SE-214-XT is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -678,7 +678,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu13.png",
+      "image": "/assets/products/fan-cpu/fancpu13.png",
       "description": "Cooler Master i71C is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -701,7 +701,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu14.png",
+      "image": "/assets/products/fan-cpu/fancpu14.png",
       "description": "DeepCool LS520 is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -724,7 +724,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/fan-cpu/fancpu15.png",
+      "image": "/assets/products/fan-cpu/fancpu15.png",
       "description": "Cooler Master ML240L is a practical fan cpu product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "fan-cpu",
@@ -748,7 +748,7 @@
     "reviews": 27,
     "discount": 10,
     "isNew": true,
-    "image": "./assets/products/game/game1.png",
+    "image": "/assets/products/game/game1.png",
     "description": "Call of Duty: Vanguard is a first-person shooter set across multiple fronts of World War II.",
     "specifications": {
       "categoryType": "game",
@@ -771,7 +771,7 @@
     "reviews": 34,
     "discount": 10,
     "isNew": true,
-    "image": "./assets/products/game/game2.png",
+    "image": "/assets/products/game/game2.png",
     "description": "Little Nightmares I & II is a dark adventure game featuring eerie environments, puzzles, and unsettling encounters.",
     "specifications": {
       "categoryType": "game",
@@ -794,7 +794,7 @@
     "reviews": 41,
     "discount": 10,
     "isNew": true,
-    "image": "./assets/products/game/game3.png",
+    "image": "/assets/products/game/game3.png",
     "description": "Minecraft Legends is an action strategy game set in the Minecraft universe.",
     "specifications": {
       "categoryType": "game",
@@ -817,7 +817,7 @@
     "reviews": 48,
     "discount": 10,
     "isNew": true,
-    "image": "./assets/products/game/game4.png",
+    "image": "/assets/products/game/game4.png",
     "description": "MudRunner: American Wilds is an off-road driving simulation focused on challenging terrain and heavy vehicles.",
     "specifications": {
       "categoryType": "game",
@@ -840,7 +840,7 @@
     "reviews": 55,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game5.png",
+    "image": "/assets/products/game/game5.png",
     "description": "God of War is an action-adventure game featuring Kratos and his son Atreus in a Norse mythology setting.",
     "specifications": {
       "categoryType": "game",
@@ -863,7 +863,7 @@
     "reviews": 62,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game6.png",
+    "image": "/assets/products/game/game6.png",
     "description": "The Last of Us Part II is a story-driven action-adventure game set in a post-apocalyptic world.",
     "specifications": {
       "categoryType": "game",
@@ -886,7 +886,7 @@
     "reviews": 69,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game7.png",
+    "image": "/assets/products/game/game7.png",
     "description": "Hollow Knight is a 2D action-adventure game featuring exploration, challenging combat, and a hand-drawn world.",
     "specifications": {
       "categoryType": "game",
@@ -909,7 +909,7 @@
     "reviews": 76,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game8.png",
+    "image": "/assets/products/game/game8.png",
     "description": "eFootball PES 2021 Season Update is a football simulation game featuring licensed teams, players, and competitive matches.",
     "specifications": {
       "categoryType": "game",
@@ -932,7 +932,7 @@
     "reviews": 83,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game9.png",
+    "image": "/assets/products/game/game9.png",
     "description": "The Order: 1886 is a cinematic third-person action-adventure game set in an alternate Victorian-era London.",
     "specifications": {
       "categoryType": "game",
@@ -955,7 +955,7 @@
     "reviews": 90,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game10.png",
+    "image": "/assets/products/game/game10.png",
     "description": "Eagle Flight is a flying adventure game in which players explore a post-human Paris from the perspective of an eagle.",
     "specifications": {
       "categoryType": "game",
@@ -978,7 +978,7 @@
     "reviews": 97,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game11.png",
+    "image": "/assets/products/game/game11.png",
     "description": "Watch Dogs: Legion is an open-world action-adventure game set in a near-future London where players can recruit and control different characters.",
     "specifications": {
       "categoryType": "game",
@@ -1001,7 +1001,7 @@
     "reviews": 104,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game12.png",
+    "image": "/assets/products/game/game12.png",
     "description": "Bloodborne is an action RPG known for its gothic setting, challenging combat, and dark atmosphere.",
     "specifications": {
       "categoryType": "game",
@@ -1024,7 +1024,7 @@
     "reviews": 111,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game13.png",
+    "image": "/assets/products/game/game13.png",
     "description": "Far Cry 5 is an open-world first-person shooter set in Hope County, Montana.",
     "specifications": {
       "categoryType": "game",
@@ -1047,7 +1047,7 @@
     "reviews": 118,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game14.png",
+    "image": "/assets/products/game/game14.png",
     "description": "Red Dead Redemption 2 is an open-world action-adventure game set in the American frontier during the late 19th century.",
     "specifications": {
       "categoryType": "game",
@@ -1070,7 +1070,7 @@
     "reviews": 125,
     "discount": 10,
     "isNew": false,
-    "image": "./assets/products/game/game15.png",
+    "image": "/assets/products/game/game15.png",
     "description": "Batman: Arkham Knight is an action-adventure game featuring Batman defending Gotham City against a range of villains.",
     "specifications": {
       "categoryType": "game",
@@ -1094,7 +1094,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/headphone/headphone1.png",
+      "image": "/assets/products/headphone/headphone1.png",
       "description": "SoundCore Lite Headset is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1117,7 +1117,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/headphone/headphone2.png",
+      "image": "/assets/products/headphone/headphone2.png",
       "description": "Gaming Bass Pro is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1140,7 +1140,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/headphone/headphone3.png",
+      "image": "/assets/products/headphone/headphone3.png",
       "description": "Studio One Headphones is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1163,7 +1163,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/headphone/headphone4.png",
+      "image": "/assets/products/headphone/headphone4.png",
       "description": "Wireless Beat 400 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1186,7 +1186,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone5.png",
+      "image": "/assets/products/headphone/headphone5.png",
       "description": "RGB Gaming X5 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1209,7 +1209,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone6.png",
+      "image": "/assets/products/headphone/headphone6.png",
       "description": "Pro Gamer H7 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1232,7 +1232,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone7.png",
+      "image": "/assets/products/headphone/headphone7.png",
       "description": "Bass Master 500 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1255,7 +1255,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone8.png",
+      "image": "/assets/products/headphone/headphone8.png",
       "description": "Silent ANC 700 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1278,7 +1278,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone9.png",
+      "image": "/assets/products/headphone/headphone9.png",
       "description": "Studio Monitor H8 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1301,7 +1301,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone10.png",
+      "image": "/assets/products/headphone/headphone10.png",
       "description": "Gaming Surround G9 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1324,7 +1324,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone11.png",
+      "image": "/assets/products/headphone/headphone11.png",
       "description": "Compact Headset C1 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1347,7 +1347,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone12.png",
+      "image": "/assets/products/headphone/headphone12.png",
       "description": "Wireless Pro W2 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1370,7 +1370,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone13.png",
+      "image": "/assets/products/headphone/headphone13.png",
       "description": "RGB Battle H10 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1393,7 +1393,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone14.png",
+      "image": "/assets/products/headphone/headphone14.png",
       "description": "Office Comfort O5 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1416,7 +1416,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/headphone/headphone15.png",
+      "image": "/assets/products/headphone/headphone15.png",
       "description": "Elite Audio E9 is a practical headphone product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "headphone",
@@ -1784,7 +1784,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mb/mb1.png",
+      "image": "/assets/products/mb/mb1.png",
       "description": "Prime H410 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1807,7 +1807,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mb/mb2.png",
+      "image": "/assets/products/mb/mb2.png",
       "description": "Prime B460 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1830,7 +1830,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mb/mb3.png",
+      "image": "/assets/products/mb/mb3.png",
       "description": "Pro B560 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1853,7 +1853,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/mb/mb4.png",
+      "image": "/assets/products/mb/mb4.png",
       "description": "Steel B660 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1876,7 +1876,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb5.png",
+      "image": "/assets/products/mb/mb5.png",
       "description": "Steel B760 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1899,7 +1899,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb6.png",
+      "image": "/assets/products/mb/mb6.png",
       "description": "Gaming H610 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1922,7 +1922,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb7.png",
+      "image": "/assets/products/mb/mb7.png",
       "description": "Gaming B660M Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1945,7 +1945,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb8.png",
+      "image": "/assets/products/mb/mb8.png",
       "description": "Gaming Z690 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1968,7 +1968,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb9.png",
+      "image": "/assets/products/mb/mb9.png",
       "description": "Pro Z790 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -1991,7 +1991,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb10.png",
+      "image": "/assets/products/mb/mb10.png",
       "description": "Creator H510 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2014,7 +2014,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb11.png",
+      "image": "/assets/products/mb/mb11.png",
       "description": "Work B450 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2037,7 +2037,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb12.png",
+      "image": "/assets/products/mb/mb12.png",
       "description": "Gaming B550 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2060,7 +2060,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb13.png",
+      "image": "/assets/products/mb/mb13.png",
       "description": "Gaming X570 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2083,7 +2083,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb14.png",
+      "image": "/assets/products/mb/mb14.png",
       "description": "Pro A520 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2106,7 +2106,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/mb/mb15.png",
+      "image": "/assets/products/mb/mb15.png",
       "description": "Extreme Z790 Motherboard is a practical mb product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "mb",
@@ -2819,7 +2819,7 @@
       "reviews": 27,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/pc/pc1.jpg",
+      "image": "/assets/products/pc/pc1.jpg",
       "description": "Core Gaming PC 01 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2842,7 +2842,7 @@
       "reviews": 34,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/pc/pc2.jpg",
+      "image": "/assets/products/pc/pc2.jpg",
       "description": "Core Gaming PC 02 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2865,7 +2865,7 @@
       "reviews": 41,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/pc/pc3.jpg",
+      "image": "/assets/products/pc/pc3.jpg",
       "description": "Pro Gaming PC 03 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2888,7 +2888,7 @@
       "reviews": 48,
       "discount": 10,
       "isNew": true,
-      "image": "./assets/products/pc/pc4.jpg",
+      "image": "/assets/products/pc/pc4.jpg",
       "description": "Creator PC 04 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2911,7 +2911,7 @@
       "reviews": 55,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc5.jpg",
+      "image": "/assets/products/pc/pc5.jpg",
       "description": "Ultimate Gaming PC 05 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2934,7 +2934,7 @@
       "reviews": 62,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc6.jpg",
+      "image": "/assets/products/pc/pc6.jpg",
       "description": "Workstation PC 06 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2957,7 +2957,7 @@
       "reviews": 69,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc7.jpg",
+      "image": "/assets/products/pc/pc7.jpg",
       "description": "Compact Office PC 07 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -2980,7 +2980,7 @@
       "reviews": 76,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc8.jpg",
+      "image": "/assets/products/pc/pc8.jpg",
       "description": "Office PC 08 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3003,7 +3003,7 @@
       "reviews": 83,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc9.jpg",
+      "image": "/assets/products/pc/pc9.jpg",
       "description": "Gaming RGB PC 09 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3026,7 +3026,7 @@
       "reviews": 90,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc10.jpg",
+      "image": "/assets/products/pc/pc10.jpg",
       "description": "Gaming RGB PC 10 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3049,7 +3049,7 @@
       "reviews": 97,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc11.jpg",
+      "image": "/assets/products/pc/pc11.jpg",
       "description": "Extreme Gaming PC 11 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3072,7 +3072,7 @@
       "reviews": 104,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc12.jpg",
+      "image": "/assets/products/pc/pc12.jpg",
       "description": "Mini PC 12 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3095,7 +3095,7 @@
       "reviews": 111,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc13.jpg",
+      "image": "/assets/products/pc/pc13.jpg",
       "description": "Creator Mini PC 13 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3118,7 +3118,7 @@
       "reviews": 118,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc14.jpg",
+      "image": "/assets/products/pc/pc14.jpg",
       "description": "White Gaming PC 14 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",
@@ -3141,7 +3141,7 @@
       "reviews": 125,
       "discount": 10,
       "isNew": false,
-      "image": "./assets/products/pc/pc15.jpg",
+      "image": "/assets/products/pc/pc15.jpg",
       "description": "Black Gaming PC 15 is a practical pc product for a training electronics store catalog. It offers a useful balance of performance, features, and value for everyday use.",
       "specifications": {
         "categoryType": "pc",

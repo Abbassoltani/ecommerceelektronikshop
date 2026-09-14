@@ -31,7 +31,7 @@ return [...products].sort(()=> Math.random()- 0.5).slice(0,1)
 
                                             <span>Up to 30% OFF </span>
                                             <h3>{item.model}</h3>
-                                            <button className="btn-button">Shop Now <i class="ri-arrow-right-s-line"></i></button>
+                                            <button className="btn-button">Shop Now <i className="ri-arrow-right-s-line"></i></button>
                                         </div>
                                     </div>
                                     <div className="col-5 col-img">

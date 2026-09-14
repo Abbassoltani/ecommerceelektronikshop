@@ -30,7 +30,7 @@ function ProductsCard() {
                         {/* left */}
                         <div className="col-12 col-md-3  ">
                             <div className="product-img h-100">
-                                <img src="./../../public/assets/productcard1.jpg" alt="" className="img-fluid h-100"
+                                <img src="/assets/assets/productcard1.jpg" alt="" className="img-fluid h-100"
                                     style={{ objectFit: 'cover' }} />
                             </div>
 
@@ -92,10 +92,10 @@ function ProductsCard() {
                                         </div>
 
                                     <div className="card-badge position-absolute  fs-3">
-                                        <i class="ri-poker-hearts-line"></i>
-                                        <i class="ri-bar-chart-grouped-line"></i>
-                                        <i class="ri-eye-line"></i>
-                                        <i class="bi bi-cart"></i>
+                                        <i className="ri-poker-hearts-line"></i>
+                                        <i className="ri-bar-chart-grouped-line"></i>
+                                        <i className="ri-eye-line"></i>
+                                        <i className="bi bi-cart"></i>
 
 
 

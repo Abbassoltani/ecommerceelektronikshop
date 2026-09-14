@@ -4,6 +4,8 @@ import { products } from './../products.json'
 import Breadcrumb from '../components/BroadCamp'
 import Star from '../components/Star'
 import { toast, ToastContainer } from 'react-toastify'
+import { Link } from 'react-router-dom'
+
 function Products() {
   const [modalwindow, setModalwindow] = useState({})
 
@@ -25,7 +27,7 @@ function Products() {
   :categoryFilter.filter(item => item.brand === brand)
 
 
-  const productSorting=[...categoryFilter]
+  const productSorting=[...categoryBrandFilter]
 
   if(sorting === 'low'){
     productSorting.sort((a,b)=>a.price - b.price)
@@ -61,6 +63,28 @@ function Products() {
 
   }
 
+  const addToCart =()=>{
+    const existingCart=JSON.parse(localStorage.getItem('cart')) || []
+    const alreadyCart=existingCart.find(item => item.id === modalwindow.id)
+
+    if(!alreadyCart){
+      const newProduct={...modalwindow, quantity : 1, total:1}
+      const update=[...existingCart, newProduct]
+      localStorage.setItem('cart' , JSON.stringify(update))
+      toast.success(`${modalwindow.name} is added to your Cart`)
+
+    }else {
+const newUpdate=existingCart.map(item => (
+  item.id === modalwindow.id ? {...item , quantity:item.quantity + 1 , total:item.total + 1 } : item
+))
+      localStorage.setItem('cart', JSON.stringify(newUpdate))
+      
+    
+    }
+
+
+
+  }
 
 
 
@@ -83,7 +107,7 @@ function Products() {
           <div className="row my-4 justify-content-center">
             <div className="col-md-5 d-md-flex d-flex align-items-center gap-3 justify-content-center  ">
               <div className="product-filter d-flex align-items-center justify-content-center">
-                <i class="bi bi-sliders2 fs-2 mx-2"></i>
+                <i className="bi bi-sliders2 fs-2 mx-2"></i>
                 <span className='d-none d-lg-flex'>Filter :</span>
               </div>
               <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e)=>{
@@ -155,7 +179,9 @@ function Products() {
                         <img src={product.image} alt="" className='product-card-image img-fluid'
                         />                  </div>
                       <div className="card-body">
-                        <h5 className="card-title">{product.name}</h5>
+                        <Link to={`/products/${product.id}`}>
+                        <h5 className="card-title" >{product.name}</h5>
+                        </Link>
                         <p className="card-text m-0">{product.model}</p>
                         <span className="cart-star ">
 
@@ -167,14 +193,14 @@ function Products() {
                       <button className="btn btn-success d-flex justify-content-center">Shop Now</button>
 
                       <div className="card-badge position-absolute  fs-4">
-                        <i class="ri-poker-hearts-line"></i>
-                        <i class="ri-bar-chart-grouped-line"></i>
-                        <i class="ri-eye-line" type='button'
+                        <i className="ri-poker-hearts-line"></i>
+                        <i className="ri-bar-chart-grouped-line"></i>
+                        <i className="ri-eye-line" type='button'
                           data-bs-target='#modalButtom'
                           data-bs-toggle='modal'
                           onClick={() => modalHandler(product.id)}
                         ></i>
-                        <i class="bi bi-cart"></i>
+                        <i className="bi bi-cart"></i>
                       </div>
                     </div>
 
@@ -228,10 +254,10 @@ function Products() {
                               <div className="card-modal-quantity-wrapper">
                                 <input type="text" placeholder='1' />
                                 <div className="quantity-buttom d-flex flex-column">
-                                  <i class="ri-arrow-up-s-line"></i>
-                                  <i class="ri-arrow-down-s-line"></i>
+                                  <i className="ri-arrow-up-s-line"></i>
+                                  <i className="ri-arrow-down-s-line"></i>
                                 </div>
-                                <button className="btn btn-info mx-auto  text-light">IN THE WARENKORB</button>
+                                <button className="btn btn-info mx-auto  text-light" onClick={addToCart}>IN THE WARENKORB</button>
                                 <button className="btn bg-black text-white">buy Now</button>
 
                               </div>
@@ -241,15 +267,15 @@ function Products() {
                                   <button className='d-flex' onClick={() => {
 
                                     addToWishlist()
-                                  }}><i class="ri-poker-hearts-line"></i>Add to Wishlist</button>
-                                  <button className='d-flex'><i class="ri-bar-chart-line"></i>Add to Compare</button>
+                                  }}><i className="ri-poker-hearts-line"></i>Add to Wishlist</button>
+                                  <button className='d-flex'><i className="ri-bar-chart-line"></i>Add to Compare</button>
                                 </div>
                                 {modalwindow.stock !== 0 ? (
-                                  <button className='card-modal-add-lager'><i class="bi bi-check-lg"></i>Auf Lager</button>
+                                  <button className='card-modal-add-lager'><i className="bi bi-check-lg"></i>Auf Lager</button>
 
                                 ) : (
 
-                                  <button className='card-modal-add-lager empty'><i class="bi bi-dash-circle"></i>nicht mehr Auf Lager</button>
+                                  <button className='card-modal-add-lager empty'><i className="bi bi-dash-circle"></i>nicht mehr Auf Lager</button>
 
                                 )}
                               </div>
