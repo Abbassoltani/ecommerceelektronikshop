@@ -61,6 +61,28 @@ function Products() {
 
   }
 
+  const addToCart =()=>{
+    const existingCart=JSON.parse(localStorage.getItem('cart')) || []
+    const alreadyCart=existingCart.find(item => item.id === modalwindow.id)
+
+    if(!alreadyCart){
+      const newProduct={...modalwindow, quantity : 1}
+      const update=[...existingCart, newProduct]
+      localStorage.setItem('cart' , JSON.stringify(update))
+      toast.success(`${modalwindow.name} is added to your Cart`)
+
+    }else {
+const newUpdate=existingCart.map(item => (
+  item.id === modalwindow.id ? {...item , quantity:item.quantity + 1 } : item
+))
+      localStorage.setItem('cart', JSON.stringify(newUpdate))
+      
+    
+    }
+
+
+
+  }
 
 
 
@@ -231,7 +253,7 @@ function Products() {
                                   <i class="ri-arrow-up-s-line"></i>
                                   <i class="ri-arrow-down-s-line"></i>
                                 </div>
-                                <button className="btn btn-info mx-auto  text-light">IN THE WARENKORB</button>
+                                <button className="btn btn-info mx-auto  text-light" onClick={addToCart}>IN THE WARENKORB</button>
                                 <button className="btn bg-black text-white">buy Now</button>
 
                               </div>
