@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import Cart from "../components/Cart";
 import ProductDetails from "../pages/ProductDetails";
+import Wishlist from "../pages/Wishlist";
+import ItemCard from "../components/ItemCard";
 
 
 
@@ -15,7 +17,8 @@ const routes=useRoutes([
         {index:true , element:<Home/>},
         {path:'products' , element:<Products/>},
         {path:'cart' , element:<Cart/>},
-        {path:'products/:id' , element:<ProductDetails/>}
+        {path:'products/:id' , element:<ProductDetails/>},
+        {path:'wishlist' , element:<Wishlist/>}
     ]}
 ])
 

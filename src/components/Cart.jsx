@@ -62,6 +62,7 @@ const deleteProduct=(productID)=>{
     const deletedItem=cartItem.filter(item => item.id !== productID)
     setCartItem(deletedItem)
     localStorage.setItem('cart' , JSON.stringify(deletedItem))
+    window.dispatchEvent(new Event('wishlistUpdate'))
 
 }
 
@@ -80,6 +81,10 @@ console.log(select);
 const removeSelectItem =()=>{
     const newItem = cartItem.filter(item => !select.includes(item.id))
     setCartItem(newItem)
+    localStorage.setItem('cart' , JSON.stringify(newItem))
+    window.dispatchEvent(new Event('wishlistUpdate'))
+
+
 
 
 }
@@ -100,7 +105,7 @@ const selectall = ()=>{
         <>
             <Breadcrumb page='Cart' />
 
-            <div className="card">
+            <div className="">
 
 
                 <div className="container card-container">

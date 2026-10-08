@@ -5,15 +5,54 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import products from './../products.json'
 import Star from './Star'
+import ItemCard from './ItemCard'
+import { useNavigate } from 'react-router-dom'
 
 function ProductsCard() {
-    const [allProduct , setAllProduct]=useState(()=>{
-        return [...products.products].sort(()=>Math.random() - 0.5)
+    const navigate = useNavigate()
+    const [allProduct, setAllProduct] = useState(() => {
+        return [...products.products].sort(() => Math.random() - 0.5)
     })
 
-    console.log('====================================');
-    console.log(products);
-    console.log('====================================');
+    const goToDetails = id => {
+        navigate(`/products/${id}`)
+    }
+
+    const addToWishList = (product) => {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+        const existingInWishList = wishlist.find(item => item.id === product.id)
+
+        if (!existingInWishList) {
+            const newItem = { ...product, quantity: 1 }
+            const updateWishlist = [...wishlist, newItem]
+            localStorage.setItem('wishlist', JSON.stringify(updateWishlist))
+        }
+
+        window.dispatchEvent(new Event('wishlistUpdate'))
+
+    }
+
+    const addToCart = product => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || []
+
+        const alreadyInCart = cart.find(item => item.id === product.id)
+
+        if (!alreadyInCart) {
+            const newItem = { ...product, quantity: 1 }
+            const updateCart = [...cart, newItem]
+            localStorage.setItem('cart', JSON.stringify(updateCart))
+            window.dispatchEvent(new Event('wishlistUpdate'))
+
+        } else {
+            const editCart = cart.map(item => (
+                item.id === product.id ? { ...item, quantity: item.quantity + 1, total: item.total + 1 } : item
+            ))
+            const updateEditedCart = editCart
+            localStorage.setItem('cart', JSON.stringify(updateEditedCart))
+
+            
+        }
+    }
 
 
 
@@ -23,21 +62,21 @@ function ProductsCard() {
         <>
             <div className="product-card py-4">
                 <div className="container">
-     
-        <hr />
+
+                    <hr />
                     <div className="row g-4 ">
 
                         {/* left */}
                         <div className="col-12 col-md-3  ">
                             <div className="product-img h-100">
-                                <img src="/assets/assets/productcard1.jpg" alt="" className="img-fluid h-100"
+                                <img src="/public/assets/bannerpc1.png" alt="" className="img-fluid h-100"
                                     style={{ objectFit: 'cover' }} />
                             </div>
 
                         </div>
 
                         {/* right  */}
-                        <div className="col-12 col-md-9 d-flex flex-column gap-3">
+                        <div className="col-12 col-md-9 d-flex flex-column gap-3 h-100">
                             <div className="product-category d-flex justify-content-center border-bottom">
                                 <ul className="d-flex justify-content-between gap-5">
                                     <li>MONITOR</li>
@@ -48,70 +87,42 @@ function ProductsCard() {
 
                             <Swiper
                                 modules={[Autoplay]}
-                                spaceBetween={10}
+                                spaceBetween={40}
                                 autoplay={{
                                     delay: 3000,
                                     disableOnInteraction: false
                                 }}
-                          breakpoints={{
-    576: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    992: { slidesPerView: 3 }
-}}
+                                breakpoints={{
+                                    576: { slidesPerView: 1 },
+                                    768: { slidesPerView: 2 },
+                                    992: { slidesPerView: 3 }
+                                }}
                                 className='w-100'
                             >
-                            
-
-                            {allProduct.map(product => (
 
 
-
-                           
-
-             <SwiperSlide  className='h-100 py-4'>
-
-
-                                    <div className="card my-1 h-100 position-relative">
-                                        <img src={product.image} alt='' className='card-img-top   ' style={{ objectFit: 'contain', height: '230px' }} 
-                                        onError={(e)=>{
-                                            e.currentTarget.src='./../../public/noimage.png'
-                                        }}
-                                        />
-                                        <div className="card-body d-flex flex-column justify-content-between  gap-1" >
-                                            <span className="card-title  text-muted  ">{product.name} </span>
-                                            <h3 className='product-card-h3  '>{product.model}</h3>
-                                            <span className='cart-star d-flex'>
-                                            <Star  price={product.price}/>
-                                            <p className='mx-2'> ({product.reviews})</p>
-                                           
-                                            
-
-                                            </span>
-                                            <span className="card-price fw-bold">Price :{product.price.toFixed(2)} $</span>
-                                            <button className="btn btn-success">Shop me</button>
-                                        </div>
-
-                                    <div className="card-badge position-absolute  fs-3">
-                                        <i className="ri-poker-hearts-line"></i>
-                                        <i className="ri-bar-chart-grouped-line"></i>
-                                        <i className="ri-eye-line"></i>
-                                        <i className="bi bi-cart"></i>
+                                {allProduct.map(product => (
 
 
 
-                                    </div>
-                                    </div>
-
-                                </SwiperSlide>
 
 
-                            ))}
-    
-                   
+                                    <SwiperSlide className='h-100 py-4 '>
 
 
 
-                             
+                                        <ItemCard products={product} onDetails={goToDetails} onWish={addToWishList} onCart={addToCart} />
+
+                                    </SwiperSlide>
+
+
+                                ))}
+
+
+
+
+
+
 
 
 
@@ -123,10 +134,10 @@ function ProductsCard() {
 
 
                     </div>
-                                    <div className="btn-wrapper">
-                            <button className="btn btn-warning d-flex product-btn "><Link to='/products'>All Item</Link></button>
+                    <div className="btn-wrapper">
+                        <button className="btn btn-warning d-flex product-btn "><Link to='/products'>All Item</Link></button>
 
-                                    </div>
+                    </div>
                 </div>
             </div>
 

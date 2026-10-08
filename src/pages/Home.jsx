@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
+import ItemCard from '../components/ItemCard'
 
 
 function Home() {
@@ -67,19 +68,23 @@ function Home() {
 
       </header>
 
-      <div className="banner-section container-fluid">
 
         <div className="container">
 
-          <div className="row ">
+          <div className="row justify-content-between">
+            <div className="">
+            <Banner />
+
+            </div>
 
 
-            <Banner />
-            <Banner />
-            <Banner />
+
+
+
+
+          
           </div>
         </div>
-      </div>
       <ProductsCard />
       <section className="info">
         <div className="container d-flex align-items-center">

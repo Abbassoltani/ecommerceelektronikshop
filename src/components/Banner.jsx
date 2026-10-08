@@ -10,39 +10,42 @@ return [...products].sort(()=> Math.random()- 0.5).slice(0,1)
 
   })
 
+  const bannerImage=[
+    '/public/assets/ai1.png',
+    '/public/assets/ai2.png',
+    '/public/assets/ai3.png',
+    '/public/assets/ai4.png',
+    '/public/assets/ai5.png',
+  ]
+
 
     return (
         <>
-           
+        <div className="banner d-flex ">
 
            
 
+           
 
 
 
-                        <div className="col-12  col-lg-4 col-md-6 mt-sm-2 banner-col">
-                            <div className="card banner p-3 h-100">
-                                <div className="row align-items-center">
 
-                                        {allProducts.map(item => 
-                                        <>
-                                                             <div className="col-7  ">
-                                        <div className="banner-content  ">
+                                      
 
-                                            <span>Up to 30% OFF </span>
-                                            <h3>{item.model}</h3>
-                                            <button className="btn-button">Shop Now <i className="ri-arrow-right-s-line"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="col-5 col-img">
-                                        <img src={item.image} className='img-fluid' alt="" />
-                                    </div>
-                                        </>
-                                        )}
+
+
+                                        {bannerImage.map(img => (
+                                            <>
+                            <div className=" bannerr  " >
+
+                                                <img src={img}alt="" className='img-fluid banner-img'/>
+                                                
+                                            </div>
+                                            </>
+                                            ))}
+
+                                    
                    
-                                </div>
-                            </div>
-                        </div>
 
      
 
@@ -54,6 +57,7 @@ return [...products].sort(()=> Math.random()- 0.5).slice(0,1)
                     
 
    
+        </div>
 
         </>
     )

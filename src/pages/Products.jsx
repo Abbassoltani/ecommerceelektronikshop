@@ -5,14 +5,15 @@ import Breadcrumb from '../components/BroadCamp'
 import Star from '../components/Star'
 import { toast, ToastContainer } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import ItemCard from '../components/ItemCard'
 
 function Products() {
   const [modalwindow, setModalwindow] = useState({})
 
-  const [wishlistItem, setWishlistItem] = useState({})
   const [category, setCategory] = useState('All Category')
   const [brand , setBrand]=useState('All Brand')
   const [sorting , setSorting]=useState('Popularity')
+
 
 
 
@@ -43,15 +44,18 @@ function Products() {
   const modalHandler = (id) => {
     const product = products.find(item => item.id === id)
     setModalwindow(product)
+
+    const modal=new bootstrap.Modal(document.getElementById('modalButtom'))
+    modal.show()
   }
 
 
-  const addToWishlist =()=>{
+  const addToWishlist =(product)=>{
     const existing =JSON.parse(localStorage.getItem('wishlist')) || []
-    const alreadyinWishlist = existing.find(item => item.id === modalwindow.id)
+    const alreadyinWishlist = existing.find(item => item.id === product)
 
         if(!alreadyinWishlist){
-          const wishlist = {...modalwindow , quantity:1}
+          const wishlist = {...product , quantity:1}
           const updateWishlist = [...existing,wishlist]
 
           localStorage.setItem('wishlist' , JSON.stringify(updateWishlist))
@@ -59,23 +63,24 @@ function Products() {
         }else {
           toast.warning('the product is added ')
         }
+    window.dispatchEvent(new Event('wishlistUpdate'))
 
 
   }
 
-  const addToCart =()=>{
+  const addToCart =(product)=>{
     const existingCart=JSON.parse(localStorage.getItem('cart')) || []
-    const alreadyCart=existingCart.find(item => item.id === modalwindow.id)
+    const alreadyCart=existingCart.find(item => item.id === product.id)
 
     if(!alreadyCart){
-      const newProduct={...modalwindow, quantity : 1, total:1}
+      const newProduct={...product, quantity : 1, total:1}
       const update=[...existingCart, newProduct]
       localStorage.setItem('cart' , JSON.stringify(update))
       toast.success(`${modalwindow.name} is added to your Cart`)
 
     }else {
 const newUpdate=existingCart.map(item => (
-  item.id === modalwindow.id ? {...item , quantity:item.quantity + 1 , total:item.total + 1 } : item
+  item.id === product.id ? {...item , quantity:item.quantity + 1 , total:item.total + 1 } : item
 ))
       localStorage.setItem('cart', JSON.stringify(newUpdate))
       
@@ -170,49 +175,19 @@ const newUpdate=existingCart.map(item => (
 
 
               {productSorting.map(product => (
-                <>
+               
+              
+                <ItemCard products={product} onWish={addToWishlist} onCart={addToCart} onModal={modalHandler}/>
 
-
-                  <div className="col-12 col-md-4 col-lg-3  d-flex justify-content-center   ">
-                    <div className="card h-100 position-relative">
-                      <div className="product-image-card">
-                        <img src={product.image} alt="" className='product-card-image img-fluid'
-                        />                  </div>
-                      <div className="card-body">
-                        <Link to={`/products/${product.id}`}>
-                        <h5 className="card-title" >{product.name}</h5>
-                        </Link>
-                        <p className="card-text m-0">{product.model}</p>
-                        <span className="cart-star ">
-
-                          <Star price={product.price} />
-
-                        </span>
-                        <h5>Price: <span>{product.price}</span></h5>
-                      </div>
-                      <button className="btn btn-success d-flex justify-content-center">Shop Now</button>
-
-                      <div className="card-badge position-absolute  fs-4">
-                        <i className="ri-poker-hearts-line"></i>
-                        <i className="ri-bar-chart-grouped-line"></i>
-                        <i className="ri-eye-line" type='button'
-                          data-bs-target='#modalButtom'
-                          data-bs-toggle='modal'
-                          onClick={() => modalHandler(product.id)}
-                        ></i>
-                        <i className="bi bi-cart"></i>
-                      </div>
-                    </div>
-
-
-                  </div>
+                
 
 
 
 
 
 
-                </>
+
+               
               ))}
 
               {/* modal */}
