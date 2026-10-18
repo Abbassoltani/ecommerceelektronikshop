@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 function ItemCard({ products , onDetails , onWish , onCart , onModal}) {
-    console.log(products);
+ 
     
     
     return (

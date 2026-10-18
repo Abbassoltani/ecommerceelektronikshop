@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 function Topbar() {
+
+
+
+
     return (
         <>
             <div className="topbar py-2 d-none d-lg-block">
@@ -19,12 +24,12 @@ function Topbar() {
                                     role='button' data-bs-toggle='dropdown'
                                     >Deutsch</a>
                                     <ul className="flag dropdown-menu position-absolute" id='dropdownMenu'>
-                                        <li className="dropdown-item"><span className="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span className="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span className="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item">  <span className="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span className="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item"><span className="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'><span className="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'><span className="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'><span className="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'>  <span className="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'><span className="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button'><span className="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
                                
                                     </ul>
                                 </li>

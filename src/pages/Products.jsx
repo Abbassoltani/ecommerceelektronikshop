@@ -4,37 +4,57 @@ import { products } from './../products.json'
 import Breadcrumb from '../components/BroadCamp'
 import Star from '../components/Star'
 import { toast, ToastContainer } from 'react-toastify'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import ItemCard from '../components/ItemCard'
+
 
 function Products() {
   const [modalwindow, setModalwindow] = useState({})
 
   const [category, setCategory] = useState('All Category')
-  const [brand , setBrand]=useState('All Brand')
-  const [sorting , setSorting]=useState('Popularity')
+  const [brand, setBrand] = useState('All Brand')
+  const [sorting, setSorting] = useState('Popularity')
+
+
+  const [searchParams, setSearchParams] = useSearchParams()
+  const searchText = searchParams.get('q')
+  const searchCategory = searchParams.get('category')
+
+
+  const globalSearch = products.filter(item =>
+    item.name.toLowerCase().includes((searchText || '').toLowerCase().trim()) ||
+    item.brand.toLowerCase().includes((searchText || '').toLowerCase().trim())
+  )
+
+
+  console.log('q:', JSON.stringify(searchText), 'نتایج:', globalSearch.length);
 
 
 
 
 
 
-  const categorySort=[...new Set(products.map(item => item.category))]
-  const categoryFilter=category === 'All Category' ? products
-  :products.filter(item => item.category === category)
+  const categorySort = [...new Set(products.map(item => item.category))]
 
-  const categortyBrand=[...new Set(categoryFilter.map(item => item.brand))]
-  const categoryBrandFilter=brand === 'All Brand'? categoryFilter 
-  :categoryFilter.filter(item => item.brand === brand)
+  const categoryFilter = searchCategory && searchCategory !== 'All Category' ?
+    globalSearch.filter(item => item.category === searchCategory) :
+    category === 'All Category' ? globalSearch
+      : globalSearch.filter(item => item.category === category)
+  // const categoryFilter = category === 'All Category' ? globalSearch
+  //   : globalSearch.filter(item => item.category === category)
+
+  const categortyBrand = [...new Set(categoryFilter.map(item => item.brand))]
+  const categoryBrandFilter = brand === 'All Brand' ? categoryFilter
+    : categoryFilter.filter(item => item.brand === brand)
 
 
-  const productSorting=[...categoryBrandFilter]
+  const productSorting = [...categoryBrandFilter]
 
-  if(sorting === 'low'){
-    productSorting.sort((a,b)=>a.price - b.price)
-  }else if (sorting === 'high'){
-    productSorting.sort((a,b)=>b.price - a.price)
-  }else {
+  if (sorting === 'low') {
+    productSorting.sort((a, b) => a.price - b.price)
+  } else if (sorting === 'high') {
+    productSorting.sort((a, b) => b.price - a.price)
+  } else {
     categoryFilter
   }
 
@@ -45,46 +65,47 @@ function Products() {
     const product = products.find(item => item.id === id)
     setModalwindow(product)
 
-    const modal=new bootstrap.Modal(document.getElementById('modalButtom'))
+    const modal = new bootstrap.Modal(document.getElementById('modalButtom'))
     modal.show()
   }
 
 
-  const addToWishlist =(product)=>{
-    const existing =JSON.parse(localStorage.getItem('wishlist')) || []
+  const addToWishlist = (product) => {
+    const existing = JSON.parse(localStorage.getItem('wishlist')) || []
     const alreadyinWishlist = existing.find(item => item.id === product)
 
-        if(!alreadyinWishlist){
-          const wishlist = {...product , quantity:1}
-          const updateWishlist = [...existing,wishlist]
+    if (!alreadyinWishlist) {
+      const wishlist = { ...product, quantity: 1 }
+      const updateWishlist = [...existing, wishlist]
 
-          localStorage.setItem('wishlist' , JSON.stringify(updateWishlist))
-          toast.success('your Product is adding to your wishlist')
-        }else {
-          toast.warning('the product is added ')
-        }
+      localStorage.setItem('wishlist', JSON.stringify(updateWishlist))
+      toast.success('your Product is adding to your wishlist')
+    } else {
+      toast.warning('the product is added ')
+    }
     window.dispatchEvent(new Event('wishlistUpdate'))
 
 
   }
 
-  const addToCart =(product)=>{
-    const existingCart=JSON.parse(localStorage.getItem('cart')) || []
-    const alreadyCart=existingCart.find(item => item.id === product.id)
+  const addToCart = (product) => {
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || []
+    const alreadyCart = existingCart.find(item => item.id === product.id)
 
-    if(!alreadyCart){
-      const newProduct={...product, quantity : 1, total:1}
-      const update=[...existingCart, newProduct]
-      localStorage.setItem('cart' , JSON.stringify(update))
+    if (!alreadyCart) {
+      const newProduct = { ...product, quantity: 1, total: 1 }
+      const update = [...existingCart, newProduct]
+      localStorage.setItem('cart', JSON.stringify(update))
       toast.success(`${modalwindow.name} is added to your Cart`)
+      window.dispatchEvent(new Event('cartUpdate'))
 
-    }else {
-const newUpdate=existingCart.map(item => (
-  item.id === product.id ? {...item , quantity:item.quantity + 1 , total:item.total + 1 } : item
-))
+    } else {
+      const newUpdate = existingCart.map(item => (
+        item.id === product.id ? { ...item, quantity: item.quantity + 1, total: item.total + 1 } : item
+      ))
       localStorage.setItem('cart', JSON.stringify(newUpdate))
-      
-    
+
+
     }
 
 
@@ -101,7 +122,7 @@ const newUpdate=existingCart.map(item => (
 
   return (
     <>
-      <Breadcrumb page='Product'/>
+      <Breadcrumb page='Product' />
       <ToastContainer
         position='top-center'
         autoClose={2000}
@@ -115,35 +136,36 @@ const newUpdate=existingCart.map(item => (
                 <i className="bi bi-sliders2 fs-2 mx-2"></i>
                 <span className='d-none d-lg-flex'>Filter :</span>
               </div>
-              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e)=>{
+              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e) => {
                 setCategory(e.target.value)
                 setBrand('All Brand')
+                setSearchParams({})
               }} >
-                  <option value='All Category'>All Category</option>
-                  {categorySort.map(item => (
-                    <option value={item}>{item}</option>
+                <option value='All Category'>All Category</option>
+                {categorySort.map(item => (
+                  <option value={item}>{item}</option>
 
-                  ))}
+                ))}
 
-              
 
-           
+
+
 
 
               </select>
 
-              <select name="" id="product-select-category" className='border border-1 p-2 d-xs-flex' value={brand} onChange={(e)=>setBrand(e.target.value)} >
+              <select name="" id="product-select-category" className='border border-1 p-2 d-xs-flex' value={brand} onChange={(e) => setBrand(e.target.value)} >
                 <option value="All Brand">All Brand</option>
                 {categortyBrand.map(item => (
 
                   <option value={item}>{item}</option>
                 ))}
-            
 
-            
+
+
               </select>
 
-  
+
             </div>
 
             <div className="col-md-5 d-none d-md-flex align-items-center gap-3 px-5 product-toolbar-left justify-content-end ">
@@ -151,7 +173,7 @@ const newUpdate=existingCart.map(item => (
 
               <span className='d-none d-lg-flex'>Sort by :</span>
 
-              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e)=>setSorting(e.target.value)}>
+              <select name="" id="product-select-category" className='border border-1 p-2' onChange={(e) => setSorting(e.target.value)}>
                 <option value="popularity">Popularity</option>
                 <option value="low">Price: Low</option>
                 <option value="high">Price : High</option>
@@ -175,11 +197,9 @@ const newUpdate=existingCart.map(item => (
 
 
               {productSorting.map(product => (
-               
-              
-                <ItemCard products={product} onWish={addToWishlist} onCart={addToCart} onModal={modalHandler}/>
 
-                
+
+                <ItemCard products={product} onWish={addToWishlist} onCart={addToCart} onModal={modalHandler} />
 
 
 
@@ -187,7 +207,9 @@ const newUpdate=existingCart.map(item => (
 
 
 
-               
+
+
+
               ))}
 
               {/* modal */}

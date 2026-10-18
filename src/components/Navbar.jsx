@@ -1,52 +1,71 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { products }  from './../products.json'
+import { Link, useNavigate } from 'react-router-dom'
+import { products } from './../products.json'
+
+
 
 
 function Navbar() {
     const [wishlistBox, setWishlistBox] = useState([])
     const [cartBox, setCartBox] = useState({})
-    const [inputValue , setInputValue]=useState('')
-    const [category , setCategory]=useState('All Category')
+    const [inputValue, setInputValue] = useState('')
+    const [category, setCategory] = useState('All Category')
 
-  
-const filtredSearch= inputValue && products.filter(item => item.category.toLowerCase().includes(inputValue.toLowerCase()))
-
+    const navigate = useNavigate()
 
 
 
-    useEffect(()=>{
+
+    // const filtredSearch= inputValue && products.filter(item => item.category.toLowerCase().includes(inputValue.toLowerCase()))
+
+    const searchHandler = () => {
+        const params = new URLSearchParams()
+        if (category) {
+            params.set('category', category)
+        }
+
+        if (inputValue.trim()) {
+            params.set('q', inputValue.trim())
+
+        }
+        navigate(`/products?${params.toString()}`)
+
+
+    }
+
+
+    useEffect(() => {
 
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
         setWishlistBox(wishlist)
         const cart = JSON.parse(localStorage.getItem('cart')) || []
         setCartBox(cart)
-        
-    } , [])
+
+    }, [])
 
 
-    useEffect(()=>{
-        function updatebage(){
-                const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
-        setWishlistBox(wishlist)
-        const cart = JSON.parse(localStorage.getItem('cart')) || []
-        setCartBox(cart)
+    useEffect(() => {
+        function updatebage() {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+            setWishlistBox(wishlist)
+            const cart = JSON.parse(localStorage.getItem('cart')) || []
+            setCartBox(cart)
         }
 
-        window.addEventListener('wishlistUpdate' , updatebage)
+        window.addEventListener('wishlistUpdate', updatebage)
+        window.addEventListener('cartUpdate', updatebage)
 
-        return ()=>{
-            window.removeEventListener('wishlistUpdate' , updatebage)
+        return () => {
+            window.removeEventListener('wishlistUpdate', updatebage)
+            window.removeEventListener('cartUpdate', updatebage)
         }
 
 
-    } , [])
 
-const filteredCategory = [...new Set(products.map(item => item.category))]
-console.log('====================================');
-console.log(filtredSearch);
-console.log('====================================');
+    }, [])
 
+    const filteredCategory = [...new Set(products.map(item => item.category))]
+    const liveSearch = products.filter(item => item.name.toLowerCase().includes(inputValue.toLowerCase().trim())) 
 
 
 
@@ -66,18 +85,19 @@ console.log('====================================');
                         <div className="col lg-6 nav-mittel  border p-2 ">
                             <div className="row">
                                 <div className="col-4 border-end">
-                                    <select name="category" id="" className='form-select border-0' onChange={(e) =>setCategory(e.target.value)}>
+                                    <select name="category" id="" className='form-select border-0' onChange={(e) => setCategory(e.target.value)}>
+                                        <option value="All Category">All Category</option>
+                                        {filteredCategory.map(category => (
+                                            <option value={category} >{category}</option>
 
-                                        <option value="">All Categories</option>
-                                        {filteredCategory.map(category => {
-                                            return(
-
-                                                <option value={category} >{category}</option>
-                                            )
+                                        ))}
 
 
 
-                                        })}
+
+
+
+
 
 
 
@@ -92,9 +112,18 @@ console.log('====================================');
                                     </select>
                                 </div>
                                 <div className="col-8 ">
-                                    <div className="input-box position-relative overflow-hidden ">
-                                        <label className='position-absolute end-0 translate-middle-y top-50  ' ><i className="ri-search-line"></i></label>
-                                        <input type="text" className="form-control  border-0" placeholder='Search product hier ...' value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
+                                    <div className="input-box position-relative  ">
+                                        <label className='position-absolute end-0 translate-middle-y top-50  ' ><i className="ri-search-line" type='button' onClick={searchHandler} ></i></label>
+                                        <input type="text" className="form-control  border-0" placeholder='Search product hier ...' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                                        {inputValue.trim() && (
+                                            <div className="search-result">
+                                                {liveSearch.map(item => (
+                                                    <Link to={`/products/${item.id}`} className="" key={item.id} onClick={()=>setInputValue('')}>
+                                                        {item.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
 
                                 </div>
@@ -154,14 +183,14 @@ console.log('====================================');
                     <div className="navbar-collapse collapse " id='navbarNav'>
                         <div className="navbar-conter d-flex justify-content-center w-100">
 
-                            <ul className="navbar-nav">
+                            {/* <ul className="navbar-nav">
                                 <li className="nav-item "><a href="" className="nav-link active">Home</a></li>
                                 <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">Shop</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">Categories</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">Products</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">Top Deals</a></li>
                                 <li className="nav-item"><a href="" className="nav-link">Elements</a></li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
 

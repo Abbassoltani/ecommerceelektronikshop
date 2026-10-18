@@ -14,6 +14,7 @@ export default function Cart() {
 useEffect(()=>{
     const cart=JSON.parse(localStorage.getItem('cart')) || []
     setCartItem(cart)
+  
 
 
 
@@ -75,7 +76,7 @@ setSelect(prev =>
 )
 
 }
-console.log(select);
+
 
 
 const removeSelectItem =()=>{

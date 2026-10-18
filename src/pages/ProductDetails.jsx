@@ -43,7 +43,7 @@ export default function ProductDetails() {
     ]
   }
 const filtredCategory= categoryImage [product.category] ||[product.image]
-  console.log(product.category);
+
 
   const addToCart =()=>{
 
@@ -57,10 +57,13 @@ const filtredCategory= categoryImage [product.category] ||[product.image]
       }
       const updatedCart=[...existingCart , newCart]
       localStorage.setItem('cart' , JSON.stringify(updatedCart))
+      window.dispatchEvent(new Event('cartUpdate'))
+
     }else{
       const newproductCart=existingCart.map(item => item.id === product.id ? {...item , quantity:quantity + 1} : item)
       
       localStorage.setItem('cart' , JSON.stringify(newproductCart))
+      window.dispatchEvent(new Event('cartUpdate'))
     }
 
 

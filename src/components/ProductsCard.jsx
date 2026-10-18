@@ -77,13 +77,7 @@ function ProductsCard() {
 
                         {/* right  */}
                         <div className="col-12 col-md-9 d-flex flex-column gap-3 h-100">
-                            <div className="product-category d-flex justify-content-center border-bottom">
-                                <ul className="d-flex justify-content-between gap-5">
-                                    <li>MONITOR</li>
-                                    <li>CPU</li>
-                                    <li>GAME</li>
-                                </ul>
-                            </div>
+                
 
                             <Swiper
                                 modules={[Autoplay]}
