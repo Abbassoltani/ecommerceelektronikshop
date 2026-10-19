@@ -1,17 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { products } from './../products.json'
+import translations from '../context/translations'
+import LanguageContext from '../context/LanguageContext'
+
+
 
 
 
 
 function Navbar() {
+      
+    
     const [wishlistBox, setWishlistBox] = useState([])
     const [cartBox, setCartBox] = useState({})
     const [inputValue, setInputValue] = useState('')
     const [category, setCategory] = useState('All Category')
 
     const navigate = useNavigate()
+    const {language} =useContext(LanguageContext)
 
 
 
@@ -97,7 +104,14 @@ function Navbar() {
 
 
 
-
+             <ul className="navbar-nav">
+                        <li className="nav-item "><a href="" className="nav-link active">Home</a></li>
+                        <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">Shop</a></li>
+                        <li className="nav-item"><a href="" className="nav-link">Categories</a></li>
+                        <li className="nav-item"><a href="" className="nav-link">Products</a></li>
+                        <li className="nav-item"><a href="" className="nav-link">Top Deals</a></li>
+                        <li className="nav-item"><a href="" className="nav-link">Elements</a></li>
+                    </ul> 
 
 
 
@@ -165,6 +179,7 @@ function Navbar() {
 
 
             <div className="nav navbar-expand-lg nav-menu ">
+     
                 <div className="container">
 
 
@@ -183,14 +198,14 @@ function Navbar() {
                     <div className="navbar-collapse collapse " id='navbarNav'>
                         <div className="navbar-conter d-flex justify-content-center w-100">
 
-                            {/* <ul className="navbar-nav">
-                                <li className="nav-item "><a href="" className="nav-link active">Home</a></li>
-                                <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">Shop</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">Categories</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">Products</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">Top Deals</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">Elements</a></li>
-                            </ul> */}
+                            <ul className="navbar-nav">
+                                <li className="nav-item "><a href="" className="nav-link active">{translations[language].home}</a></li>
+                                <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">{translations[language].shop}</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">{translations[language].category}</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">{translations[language].product}</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">{translations[language].topDeal}</a></li>
+                                <li className="nav-item"><a href="" className="nav-link">{translations[language].artikel}</a></li>
+                            </ul> 
                         </div>
                     </div>
 

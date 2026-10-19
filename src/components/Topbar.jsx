@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
-
+import React, { useContext, useState } from 'react'
+import LanguageContext from '../context/LanguageContext'
+import translations from '../context/translations'
 
 function Topbar() {
 
 
+const {language , setLanguage}=useContext(LanguageContext)
 
+
+const languages = {
+    de: { name: 'Deutsch', flag: 'de' },
+    en: { name: 'English', flag: 'gb' },
+    fr: { name: 'Français', flag: 'fr' },
+    es: { name: 'Español', flag: 'es' },
+    it: { name: 'Italiano', flag: 'it' },
+    pl: { name: 'Polski', flag: 'pl' }
+}
 
     return (
         <>
@@ -12,24 +23,24 @@ function Topbar() {
                 <div className="container">
                     <div className="row justify-content-between align-items-center">
                         <div className="col-md-6 ">
-                            <p className="topbar-text">Get Up To 10% OFF New Season Styles, Limited Time Only</p>
+                            <p className="topbar-text">{translations[language].topbarOffer}</p>
                         </div>
 
                         <div className="col-md-6 d-flex justify-content-lg-end">
                            <div className="languge ">
                             <ul className="d-flex">
                                 <li className='d-flex gap-2 dropdown position-relative'>
-                                    <span className="fi fi-de"></span>
+                                    <span className={`fi fi-${languages[language].flag}`}></span>
                                     <a href="#" className="nav-link dropdown-toggle" id='dropdownMent' aria-expanded='false'
                                     role='button' data-bs-toggle='dropdown'
-                                    >Deutsch</a>
+                                    >{`${languages[language].name}`}</a>
                                     <ul className="flag dropdown-menu position-absolute" id='dropdownMenu'>
-                                        <li className="dropdown-item" type='button'><span className="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item" type='button'><span className="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item" type='button'><span className="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item" type='button'>  <span className="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item" type='button'><span className="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
-                                        <li className="dropdown-item" type='button'><span className="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('en')}><span className="fi fi-gb-eng me-2"></span> English <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('fr')}><span className="fi fi-fr me-2"></span> Francais <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('es')}><span className="fi fi-es me-2"></span> Espanol <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('de')}>  <span className="fi fi-de me-2"></span>deutsch <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('it')}><span className="fi fi-it me-2"></span> Italiano <hr className="dropdown-divider" /></li>
+                                        <li className="dropdown-item" type='button' onClick={()=>setLanguage('pl')}><span className="fi fi-pl me-2"></span> Polski <hr className="dropdown-divider" /></li>
                                
                                     </ul>
                                 </li>
