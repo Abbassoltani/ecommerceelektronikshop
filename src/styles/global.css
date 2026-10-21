@@ -2,6 +2,9 @@
 @import './variables.css';
 
 /* topbar */
+.topbar {
+    z-index: 9999;
+}
 
 .topbar-text {
     font-family: var(--montsrat);
@@ -1365,3 +1368,108 @@ color:red;
     color: var(--bg-color);
 
 }
+
+
+/* Login */
+
+.login {
+    width: 100%;
+    margin: 50px auto;
+    height: 100vh;
+    background-color:rgba(141, 141, 143, 1);
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    overflow-y: auto;
+    inset: 0;
+    
+
+
+
+
+}
+
+.login-input-wrapper {
+    width: 700px;
+    min-height: 600px;
+
+    margin: 50px auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px  0;
+    border-radius: 20px;
+    flex-direction: column;
+    /* border: 1px solid rgb(122, 121, 121); */
+
+
+}
+
+
+
+.login-input-wrapper .btn-close{
+    top: 25px;
+    right: 25px;
+    padding: 0;
+
+
+
+}
+
+
+
+.login-box {
+    border: none;
+}
+
+.login-box i {
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+}
+
+.login-box input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    box-shadow:none !important ;
+    
+ 
+}
+
+.login-box label {
+    padding: 10px;
+    font-size: 20px;
+    font-family: var(--popins);
+   border: none;
+ 
+}
+
+.login-input-wrapper button {
+    padding: 10px 50px;
+    font-size: 20px !important;
+    font-family: var(--popins);
+   border: none;
+ 
+}
+
+.login-password-link {
+    font-size: 1.2rem;
+    font-family: var(--michorma);
+    color: var(--card-color);
+}
+
+.login-register-link {
+    font-family: var(--michorma);
+    margin-top: 20px;
+}
+
+.login-register-link a {
+color: var(--card-color);
+padding-left: 5px;
+}
+
+
+

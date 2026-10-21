@@ -36,7 +36,7 @@ function Home() {
                 <div className="hero-content">
                   <h4>Weekly offer!</h4>
                   <h1>Xiaomi PAD 5, 11-inch 128GB, Pearl White</h1>
-                  <span className="hero-offer">Limited time offer!</span>
+                  <span className="hero-offer d-block">Limited time offer!</span>
                   <button className='btn-button'>Learn More <i className="ri-arrow-right-s-line"></i> </button>
 
                 </div>
@@ -53,7 +53,7 @@ function Home() {
                   <h4>AMAZING OFFER!</h4>
                   <h1>PDP Wired Controlle For Xbox One</h1>
                   <span className="hero-offer">Best Deal offer!</span>
-                  <button className='btn-button'>Learn More <i className="ri-arrow-right-s-line"></i> </button>
+                  <button className='btn-button d-block'>Learn More <i className="ri-arrow-right-s-line"></i> </button>
 
                 </div>
               </div>

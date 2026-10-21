@@ -105,12 +105,12 @@ function Navbar() {
 
 
              <ul className="navbar-nav">
-                        <li className="nav-item "><a href="" className="nav-link active">Home</a></li>
-                        <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">Shop</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Categories</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Products</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Top Deals</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Elements</a></li>
+                        <li className="nav-item "><Link to="" className="nav-link active">Home</Link></li>
+                        <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">Shop</Link></li>
+                        <li className="nav-item"><Link to="" className="nav-link">Categories</Link></li>
+                        <li className="nav-item"><Link to="" className="nav-link">Products</Link></li>
+                        <li className="nav-item"><Link to="" className="nav-link">Top Deals</Link></li>
+                        <li className="nav-item"><Link to="" className="nav-link">Elements</Link></li>
                     </ul> 
 
 
@@ -148,7 +148,10 @@ function Navbar() {
                         <div className="col-lg-3">
                             <div className="navbar-icon-wrapper mt-4 justify-content-center  d-flex gap-4 justify-content-center align-items-center">
                                 <div className="navbar-icon-item">
+                                    <Link to='/login'>
                                     <i className="ri-user-line"></i>
+                                    
+                                    </Link>
                                 </div>
 
                                 <Link to='wishlist'>
@@ -199,12 +202,12 @@ function Navbar() {
                         <div className="navbar-conter d-flex justify-content-center w-100">
 
                             <ul className="navbar-nav">
-                                <li className="nav-item "><a href="" className="nav-link active">{translations[language].home}</a></li>
-                                <li className="nav-item dropdown"><a href="" className="nav-link dropdown-toggle ">{translations[language].shop}</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">{translations[language].category}</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">{translations[language].product}</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">{translations[language].topDeal}</a></li>
-                                <li className="nav-item"><a href="" className="nav-link">{translations[language].artikel}</a></li>
+                                <li className="nav-item "><Link to="/" className="nav-link active">{translations[language].home}</Link></li>
+                                <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">{translations[language].shop}</Link></li>
+                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].category}</Link></li>
+                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].product}</Link></li>
+                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].topDeal}</Link></li>
+                           
                             </ul> 
                         </div>
                     </div>

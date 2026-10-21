@@ -7,6 +7,8 @@ import Cart from "../components/Cart";
 import ProductDetails from "../pages/ProductDetails";
 import Wishlist from "../pages/Wishlist";
 import ItemCard from "../components/ItemCard";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 
@@ -18,7 +20,11 @@ const routes=useRoutes([
         {path:'products' , element:<Products/>},
         {path:'cart' , element:<Cart/>},
         {path:'products/:id' , element:<ProductDetails/>},
-        {path:'wishlist' , element:<Wishlist/>}
+        {path:'wishlist' , element:<Wishlist/>},
+        {path:'/login' , element:<Login/>},
+        {path:'/register' , element:<Register/>},
+       
+
     ]}
 ])
 

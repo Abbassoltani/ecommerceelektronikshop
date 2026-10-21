@@ -101,7 +101,7 @@ function ProductsCard() {
 
 
 
-                                    <SwiperSlide className='h-100 py-4 '>
+                                    <SwiperSlide className='h-100 py-4 d-flex gap-0'>
 
 
 
