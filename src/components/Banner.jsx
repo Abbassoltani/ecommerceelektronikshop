@@ -15,7 +15,7 @@ function Banner() {
 
   return (
     <>
-      <div className="banner d-flex ">
+      <div className="banner-section  ">
 
         {bannerImage.map(img => (
           <>

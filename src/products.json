@@ -41,6 +41,14 @@
       "name": "PC"
     }
   ],
+  "services":[
+  {"title":"Web Development" , "des" : "Professional web solutions With modern technologies and responsive designs." , "icon" :"code"},
+  {"title":"Mobile App Development" , "des" : "Native and cross-platform mobile applications for iOS and Android." , "icon" :"smartphone"},
+  {"title":"Cloud Solutions" , "des" : "Scalable cloud infrastructure and deployment solutions for your business." , "icon" :"git-merge"},
+  {"title":"Digital Marketing" , "des" : "Strategic digital marketing campaigns to boost your online presence." , "icon" :"seo"},
+  {"title":"UX/UI Design" , "des" : "User-centered design experiences that engage and convert your audience." , "icon" :"figma"},
+  {"title":"Data Analytics" , "des" : "Transform your data into actionable insights for better business decisions." , "icon" :"database-2"}
+  ],
   "totalProducts": 135,
   "products": [
     {

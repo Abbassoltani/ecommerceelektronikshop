@@ -62,7 +62,7 @@ window.dispatchEvent(new Event('cartUpdate'))
     {!wishlistItem.length && (
       <div className="wishlist-info w-100"> <i class="ri-error-warning-line"></i> Dein Wishllist ist Leer</div>
     )}
-      <div className="container">
+      <div className="container wishlist-section">
 
         <div className="row">
 

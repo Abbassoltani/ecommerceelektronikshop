@@ -3,16 +3,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { products } from './../products.json'
 import translations from '../context/translations'
 import LanguageContext from '../context/LanguageContext'
-
-
-
-
-
-
+import Topbar from './Topbar'
 
 function Navbar() {
-
-
     const [wishlistBox, setWishlistBox] = useState(() => {
         return JSON.parse(localStorage.getItem('wishlist')) || []
     })
@@ -21,14 +14,12 @@ function Navbar() {
     })
     const [inputValue, setInputValue] = useState('')
     const [category, setCategory] = useState('All Category')
+    
+    // اضافه کردن state برای مدیریت باز و بسته شدن منو در موبایل
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const navigate = useNavigate()
     const { language } = useContext(LanguageContext)
-
-
-
-
-    // const filtredSearch= inputValue && products.filter(item => item.category.toLowerCase().includes(inputValue.toLowerCase()))
 
     const searchHandler = () => {
         const params = new URLSearchParams()
@@ -40,8 +31,6 @@ function Navbar() {
             params.set('q', inputValue.trim())
         }
         navigate(`/products?${params.toString()}`)
-
-
     }
 
     const updateCartbage = useCallback(() => {
@@ -49,20 +38,12 @@ function Navbar() {
         setCartBox(cart)
     }, [])
 
-
-
     const updateWishlistbage = useCallback(() => {
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
         setWishlistBox(wishlist)
-
     }, [])
 
-
-
-
     useEffect(() => {
-
-
         window.addEventListener('wishlistUpdate', updateWishlistbage)
         window.addEventListener('cartUpdate', updateCartbage)
 
@@ -70,69 +51,40 @@ function Navbar() {
             window.removeEventListener('wishlistUpdate', updateWishlistbage)
             window.removeEventListener('cartUpdate', updateCartbage)
         }
-
-
-
     }, [updateCartbage, updateWishlistbage])
 
     const filteredCategory = [...new Set(products.map(item => item.category))]
     const liveSearch = products.filter(item => item.name.toLowerCase().includes(inputValue.toLowerCase().trim()))
 
-
-
-
-
     return (
         <>
-            <div className="navbar-top ">
+        <div className="fixed-top bg-light">
+        <Topbar/>
+            <div className="navbar-top">
                 <div className="container">
                     <div className="row w-100 justify-content-between align-items-center ">
                         <div className="col-lg-3">
                             <div className="nav-brand d-flex justify-content-center">
-                                <Link to="/" className="navbar-brand">SHOPIFY</Link>
+                                <Link to="/" className="navbar-brand">Nextify</Link>
                             </div>
                         </div>
 
-                        <div className="col lg-6 nav-mittel  border p-2 ">
+                        <div className="col lg-6 nav-mittel border p-2 ">
                             <div className="row">
                                 <div className="col-4 border-end">
                                     <select name="category" id="" className='form-select border-0' onChange={(e) => setCategory(e.target.value)}>
                                         <option value="All Category">All Category</option>
-                                        {filteredCategory.map(category => (
-                                            <option value={category} >{category}</option>
-
+                                        {filteredCategory.map(cat => (
+                                            <option key={cat} value={cat}>{cat}</option>
                                         ))}
-
-
-
-
-
-
-                                        <ul className="navbar-nav">
-                                            <li className="nav-item "><Link to="" className="nav-link active">Home</Link></li>
-                                            <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">Shop</Link></li>
-                                            <li className="nav-item"><Link to="" className="nav-link">Categories</Link></li>
-                                            <li className="nav-item"><Link to="" className="nav-link">Products</Link></li>
-                                            <li className="nav-item"><Link to="" className="nav-link">Top Deals</Link></li>
-                                            <li className="nav-item"><Link to="" className="nav-link">Elements</Link></li>
-                                        </ul>
-
-
-
-
-                                        {/* <option value="">shop</option>
-                                        <option value="">Cameras</option>
-                                        <option value="">Charger & Cabels</option>
-                                        <option value="">Laptap & Computers</option>
-                                        <option value="">Phones</option>
-                                        <option value="">Smart Devieces</option>
-                                        <option value="">TV & Speakers</option> */}
                                     </select>
                                 </div>
                                 <div className="col-8 ">
-                                    <div className="input-box position-relative  ">
-                                        <label className='position-absolute end-0 translate-middle-y top-50  ' ><i className="ri-search-line" type='button' onClick={searchHandler} ></i></label>
-                                        <input type="text" className="form-control  border-0" placeholder='Search product hier ...' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                                    <div className="input-box position-relative">
+                                        <label className='position-absolute end-0 translate-middle-y top-50'>
+                                            <i className="ri-search-line" type='button' onClick={searchHandler}></i>
+                                        </label>
+                                        <input type="text" className="form-control border-0" placeholder='Search product hier ...' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
                                         {inputValue.trim() && (
                                             <div className="search-result">
                                                 {liveSearch.map(item => (
@@ -143,18 +95,15 @@ function Navbar() {
                                             </div>
                                         )}
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
 
                         <div className="col-lg-3">
-                            <div className="navbar-icon-wrapper mt-4 justify-content-center  d-flex gap-4 justify-content-center align-items-center">
+                            <div className="navbar-icon-wrapper mt-4 justify-content-center d-flex gap-4 align-items-center">
                                 <div className="navbar-icon-item">
                                     <Link to='/login'>
                                         <i className="ri-user-line"></i>
-
                                     </Link>
                                 </div>
 
@@ -165,60 +114,45 @@ function Navbar() {
                                     </div>
                                 </Link>
 
-                                <div className="navbar-icon-item position-relative ">
+                                <div className="navbar-icon-item position-relative">
                                     <Link to='/cart'>
-                                        <i className="ri-shopping-basket-line "></i>
+                                        <i className="ri-shopping-basket-line"></i>
                                     </Link>
-                                    <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">{cartBox.reduce((total , number)=>total + (number.quantity || 1 ) , 0)}</span>
-
+                                    <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">
+                                        {cartBox.reduce((total, number) => total + (number.quantity || 1), 0)}
+                                    </span>
                                 </div>
-
                             </div>
-
-
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
 
-
-            <div className="nav navbar-expand-lg nav-menu ">
-
+            <div className="nav navbar-expand-lg nav-menu">
                 <div className="container">
-
-
-                    <button className="navbar-toggler text-center w-100 "
+                    {/* دکمه تورگل با قابلیت تغییر state */}
+                    <button 
+                        className="navbar-toggler text-center w-100"
                         type='button'
-                        data-bs-toggle='collapse'
-                        data-bs-target='#navbarNav'
-                        aria-controls='navbarNav'
-                        aria-expanded='false'
-                        aria-label='toggle navigation'
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-
                         <i className="ri-menu-line"></i>
                     </button>
 
-                    <div className="navbar-collapse collapse " id='navbarNav'>
-                        <div className="navbar-conter d-flex justify-content-center w-100">
-
-                            <ul className="navbar-nav">
-                                <li className="nav-item "><Link to="/" className="nav-link active">{translations[language].home}</Link></li>
-                                <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">{translations[language].shop}</Link></li>
+                    {/* اضافه کردن کلاس show بر اساس state */}
+                    <div className={`navbar-collapse collapse ${isMenuOpen ? 'show' : ''}`} id='navbarNav'>
+                        <div className="navbar-nav d-flex justify-content-center w-100">
+                            <ul className="navbar-nav" onClick={() => setIsMenuOpen(false)}>
+                                <li className="nav-item"><Link to="/" className="nav-link active">{translations[language].home}</Link></li>
+                                <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle">{translations[language].shop}</Link></li>
                                 <li className="nav-item"><Link to="" className="nav-link">{translations[language].category}</Link></li>
-                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].product}</Link></li>
+                                <li className="nav-item"><Link to="/products" className="nav-link">{translations[language].product}</Link></li>
                                 <li className="nav-item"><Link to="" className="nav-link">{translations[language].topDeal}</Link></li>
-
                             </ul>
                         </div>
                     </div>
-
-
                 </div>
-
+            </div>
             </div>
         </>
     )

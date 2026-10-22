@@ -225,15 +225,15 @@ function Products() {
                     </div>
                     <div className="modal-body">
                       <div className="row">
-                        <div className="col-6">
+                        <div className="col-12 col-md-6">
                           <img src={modalwindow.image} alt="" className="modal-image" />
                         </div>
-                        <div className="col-6">
+                        <div className="col-12 col-md-6">
                           <div className="card-modal-wrapper">
-                            <div className="card-modal-content">
+                            <div className="card-modal-content text-center">
                               <h3 className="card-modal-title">{modalwindow.name}</h3>
                               <h3 className="card-modal-price">{modalwindow.price} $</h3>
-                              <span className='modal-star'><Star price={modalwindow.price} /> <p>({modalwindow.reviews})</p></span>
+                              <span className='modal-star text-center'><Star price={modalwindow.price} /> <p>({modalwindow.reviews})</p></span>
                               <p className="card-modal-des text-muted">{modalwindow.description}</p>
                             </div>
 

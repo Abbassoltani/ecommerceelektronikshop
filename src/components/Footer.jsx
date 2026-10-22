@@ -5,7 +5,7 @@
 function Footer() {
     return (
         <>
-            <div className="footer bg-body-secondary">
+            <div className="footer bg-body-secondary mt-5 position-relative">
                 <div className="footer-top">
                     <div className="container">
                         <div className="row align-items-center">
@@ -55,7 +55,7 @@ function Footer() {
                                 <div className="footer-logo">
                                     TechShop
                                 </div>
-                                <p>Shop Default</p>
+                                <p className="footer-bottom-title">Shop Default</p>
                                 <span className='footer-bottom-address d-block'>76297 Stutensee, ostStraße 1</span>
 
                                 <span className="footer-bottom-tel d-block">TEL :  +49 111 222 333</span>
@@ -71,7 +71,7 @@ function Footer() {
 
 
                             <div className="col-12 col-md-3 part2 ">
-                                <h6>Products</h6>
+                                <h6 className="footer-bottom-title">Products</h6>
                                 <ul className='m-0 p-0'>
                                     <li className="text-muted">Prices drop</li>
                                     <li className="text-muted">New products</li>
@@ -82,8 +82,8 @@ function Footer() {
                                 </ul>
                             </div>
 
-                            <div className="col-12 col-md-3 part2 ">
-                                <h6>Our Company</h6>
+                            <div className="col-12 col-md-3 part3 ">
+                                <h6 className="footer-bottom-title">Our Company</h6>
                                 <ul className='m-0 p-0'>
                                     <li className="text-muted">Delivery</li>
                                     <li className="text-muted">Legal Notice</li>
@@ -94,8 +94,8 @@ function Footer() {
                                 </ul>
                             </div>
 
-                            <div className="col-12 col-md-3 part2 ">
-                                <h6>Your Account</h6>
+                            <div className="col-12 col-md-3 part4 ">
+                                <h6 className="footer-bottom-title">Your Account</h6>
                                 <ul className='m-0 p-0'>
                                     <li className="text-muted">Order tracking</li>
                                     <li className="text-muted">Sign in</li>
@@ -110,9 +110,9 @@ function Footer() {
 
 
 
-
                         </div>
                     </div>
+<h5 className="text-center mt-2 bg-black p-3 text-white ">© 2026 Nextify. All Rights Reserved. Designed with care for a better shopping experience.</h5>
                 </div>
             </div>
 
