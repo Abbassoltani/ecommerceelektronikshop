@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import  {  useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import products from './../products.json'
-import Star from './Star'
+
 import ItemCard from './ItemCard'
 import { useNavigate } from 'react-router-dom'
 
 function ProductsCard() {
     const navigate = useNavigate()
-    const [allProduct, setAllProduct] = useState(() => {
+    const [allProduct] = useState(() => {
         return [...products.products].sort(() => Math.random() - 0.5)
     })
 
@@ -41,7 +41,7 @@ function ProductsCard() {
             const newItem = { ...product, quantity: 1 }
             const updateCart = [...cart, newItem]
             localStorage.setItem('cart', JSON.stringify(updateCart))
-            window.dispatchEvent(new Event('wishlistUpdate'))
+            window.dispatchEvent(new Event('cartUpdate'))
 
         } else {
             const editCart = cart.map(item => (
@@ -49,6 +49,8 @@ function ProductsCard() {
             ))
             const updateEditedCart = editCart
             localStorage.setItem('cart', JSON.stringify(updateEditedCart))
+            window.dispatchEvent(new Event('cartUpdate'))
+
 
             
         }
@@ -69,7 +71,7 @@ function ProductsCard() {
                         {/* left */}
                         <div className="col-12 col-md-3  ">
                             <div className="product-img h-100">
-                                <img src="/public/assets/bannerpc1.png" alt="" className="img-fluid h-100"
+                                <img src="/assets/bannerpc1.png" alt="" className="img-fluid h-100"
                                     style={{ objectFit: 'cover' }} />
                             </div>
 

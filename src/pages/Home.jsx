@@ -1,5 +1,4 @@
 
-import React, { useState } from 'react'
 import Banner from '../components/Banner'
 
 import ProductsCard from '../components/ProductsCard'
@@ -7,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
-import ItemCard from '../components/ItemCard'
 
 
 function Home() {

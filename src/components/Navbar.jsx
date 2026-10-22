@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useCallback, useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { products } from './../products.json'
 import translations from '../context/translations'
@@ -9,16 +9,21 @@ import LanguageContext from '../context/LanguageContext'
 
 
 
+
 function Navbar() {
-      
-    
-    const [wishlistBox, setWishlistBox] = useState([])
-    const [cartBox, setCartBox] = useState({})
+
+
+    const [wishlistBox, setWishlistBox] = useState(() => {
+        return JSON.parse(localStorage.getItem('wishlist')) || []
+    })
+    const [cartBox, setCartBox] = useState(() => {
+        return JSON.parse(localStorage.getItem('cart')) || []
+    })
     const [inputValue, setInputValue] = useState('')
     const [category, setCategory] = useState('All Category')
 
     const navigate = useNavigate()
-    const {language} =useContext(LanguageContext)
+    const { language } = useContext(LanguageContext)
 
 
 
@@ -33,46 +38,45 @@ function Navbar() {
 
         if (inputValue.trim()) {
             params.set('q', inputValue.trim())
-
         }
         navigate(`/products?${params.toString()}`)
 
 
     }
 
-
-    useEffect(() => {
-
-        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
-        setWishlistBox(wishlist)
+    const updateCartbage = useCallback(() => {
         const cart = JSON.parse(localStorage.getItem('cart')) || []
         setCartBox(cart)
+    }, [])
+
+
+
+    const updateWishlistbage = useCallback(() => {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
+        setWishlistBox(wishlist)
 
     }, [])
+
+
 
 
     useEffect(() => {
-        function updatebage() {
-            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
-            setWishlistBox(wishlist)
-            const cart = JSON.parse(localStorage.getItem('cart')) || []
-            setCartBox(cart)
-        }
 
-        window.addEventListener('wishlistUpdate', updatebage)
-        window.addEventListener('cartUpdate', updatebage)
+
+        window.addEventListener('wishlistUpdate', updateWishlistbage)
+        window.addEventListener('cartUpdate', updateCartbage)
 
         return () => {
-            window.removeEventListener('wishlistUpdate', updatebage)
-            window.removeEventListener('cartUpdate', updatebage)
+            window.removeEventListener('wishlistUpdate', updateWishlistbage)
+            window.removeEventListener('cartUpdate', updateCartbage)
         }
 
 
 
-    }, [])
+    }, [updateCartbage, updateWishlistbage])
 
     const filteredCategory = [...new Set(products.map(item => item.category))]
-    const liveSearch = products.filter(item => item.name.toLowerCase().includes(inputValue.toLowerCase().trim())) 
+    const liveSearch = products.filter(item => item.name.toLowerCase().includes(inputValue.toLowerCase().trim()))
 
 
 
@@ -104,14 +108,14 @@ function Navbar() {
 
 
 
-             <ul className="navbar-nav">
-                        <li className="nav-item "><Link to="" className="nav-link active">Home</Link></li>
-                        <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">Shop</Link></li>
-                        <li className="nav-item"><Link to="" className="nav-link">Categories</Link></li>
-                        <li className="nav-item"><Link to="" className="nav-link">Products</Link></li>
-                        <li className="nav-item"><Link to="" className="nav-link">Top Deals</Link></li>
-                        <li className="nav-item"><Link to="" className="nav-link">Elements</Link></li>
-                    </ul> 
+                                        <ul className="navbar-nav">
+                                            <li className="nav-item "><Link to="" className="nav-link active">Home</Link></li>
+                                            <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle ">Shop</Link></li>
+                                            <li className="nav-item"><Link to="" className="nav-link">Categories</Link></li>
+                                            <li className="nav-item"><Link to="" className="nav-link">Products</Link></li>
+                                            <li className="nav-item"><Link to="" className="nav-link">Top Deals</Link></li>
+                                            <li className="nav-item"><Link to="" className="nav-link">Elements</Link></li>
+                                        </ul>
 
 
 
@@ -132,7 +136,7 @@ function Navbar() {
                                         {inputValue.trim() && (
                                             <div className="search-result">
                                                 {liveSearch.map(item => (
-                                                    <Link to={`/products/${item.id}`} className="" key={item.id} onClick={()=>setInputValue('')}>
+                                                    <Link to={`/products/${item.id}`} className="" key={item.id} onClick={() => setInputValue('')}>
                                                         {item.name}
                                                     </Link>
                                                 ))}
@@ -149,8 +153,8 @@ function Navbar() {
                             <div className="navbar-icon-wrapper mt-4 justify-content-center  d-flex gap-4 justify-content-center align-items-center">
                                 <div className="navbar-icon-item">
                                     <Link to='/login'>
-                                    <i className="ri-user-line"></i>
-                                    
+                                        <i className="ri-user-line"></i>
+
                                     </Link>
                                 </div>
 
@@ -165,7 +169,7 @@ function Navbar() {
                                     <Link to='/cart'>
                                         <i className="ri-shopping-basket-line "></i>
                                     </Link>
-                                    <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">{cartBox.length}</span>
+                                    <span className="badge position-absolute top-0 start-50 rounded-5 translate-middle-y bg-black">{cartBox.reduce((total , number)=>total + (number.quantity || 1 ) , 0)}</span>
 
                                 </div>
 
@@ -182,7 +186,7 @@ function Navbar() {
 
 
             <div className="nav navbar-expand-lg nav-menu ">
-     
+
                 <div className="container">
 
 
@@ -207,8 +211,8 @@ function Navbar() {
                                 <li className="nav-item"><Link to="" className="nav-link">{translations[language].category}</Link></li>
                                 <li className="nav-item"><Link to="" className="nav-link">{translations[language].product}</Link></li>
                                 <li className="nav-item"><Link to="" className="nav-link">{translations[language].topDeal}</Link></li>
-                           
-                            </ul> 
+
+                            </ul>
                         </div>
                     </div>
 

@@ -130,7 +130,7 @@ select.form-select:focus {
 .hero1 {
     height: 100%;
 
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(36, 16, 31, 0.3)), url('./../../public/assets/3.png');
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(36, 16, 31, 0.3)), url('/assets/3.png');
     background-size: cover;
     background-position: 70% center;
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@ select.form-select:focus {
 }
 
 .hero2 {
-    background-image: linear-gradient(90deg, rgba(5, 17, 5, 0.9), rgba(0, 4, 9, 0.3)), url('./../../public/assets/2.png');
+    background-image: linear-gradient(90deg, rgba(5, 17, 5, 0.9), rgba(0, 4, 9, 0.3)), url('/assets/2.png');
     background-size: cover;
     background-position: 75% center;
     background-repeat: no-repeat;
@@ -448,7 +448,7 @@ select.form-select:focus {
 }
 
 .info .container {
-    background-image: url('./../../public/assets/banner02.jpg');
+    background-image: url('/assets/banner02.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1153,7 +1153,7 @@ td[data-label='Price'] h5 {
 .global-cart {
     background-color: rgba(25, 74, 87, 0.1) !important;
     /* padding: 20px !important; */
-    margin: 10px 0 !important;
+    margin: 10px 10px !important;
     width: 280px;
     /* box-shadow:   0 15px 10px -8px rgba(0, 0, 0, 0.55); */
     border-radius: 5px !important;

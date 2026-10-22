@@ -1,26 +1,18 @@
 
-import React, { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import Breadcrumb from './BroadCamp'
 
 
 export default function Cart() {
 
-    const [cartItem, setCartItem] = useState([])
+    const [cartItem, setCartItem] = useState( ()=>{
+        return JSON.parse(localStorage.getItem('cart') ) || []
+    } )
     const [select , setSelect]=useState([])
 
 
 
 
-useEffect(()=>{
-    const cart=JSON.parse(localStorage.getItem('cart')) || []
-    setCartItem(cart)
-  
-
-
-
-
-
-},[])
 
 
 
@@ -63,7 +55,7 @@ const deleteProduct=(productID)=>{
     const deletedItem=cartItem.filter(item => item.id !== productID)
     setCartItem(deletedItem)
     localStorage.setItem('cart' , JSON.stringify(deletedItem))
-    window.dispatchEvent(new Event('wishlistUpdate'))
+    window.dispatchEvent(new Event('cartUpdate'))
 
 }
 
@@ -74,6 +66,7 @@ setSelect(prev =>
     prev.filter(item => item !== cardID) : 
     [...prev , cardID]
 )
+    window.dispatchEvent(new Event('cartUpdate'))
 
 }
 
@@ -83,7 +76,9 @@ const removeSelectItem =()=>{
     const newItem = cartItem.filter(item => !select.includes(item.id))
     setCartItem(newItem)
     localStorage.setItem('cart' , JSON.stringify(newItem))
-    window.dispatchEvent(new Event('wishlistUpdate'))
+   
+    window.dispatchEvent(new Event('cartUpdate'))
+
 
 
 
@@ -95,6 +90,8 @@ const selectall = ()=>{
 
     if(select.length === cartItem.length){
     setSelect([])
+    window.dispatchEvent(new Event('cartUpdate'))
+
     }else{
         setSelect(cartItem.map(item => item.id))
     }
@@ -168,9 +165,9 @@ const selectall = ()=>{
                         ))}
                             </table>
                    
-         <div className="cart-total-box">
-                                <span className='total-cart' onClick={selectall}><input type="checkbox" className='form-check' />Select All</span>
-                                <span className='total-cart'onClick={removeSelectItem} ><i className="ri-delete-bin-line" ></i>Remove Selected</span>
+         <div className="cart-total-box" onClick={removeSelectItem}>
+                                <span className='total-cart' onClick={selectall}><input type="checkbox" className='form-check'  />Select All</span>
+                                <span className='total-cart'onClick={removeSelectItem}  type='button' ><i className="ri-delete-bin-line" type='button'></i>Remove Selected</span>
 
                             </div>
 

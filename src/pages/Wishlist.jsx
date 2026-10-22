@@ -1,15 +1,15 @@
 
-import React, { useEffect, useState } from 'react'
+import  {  useState } from 'react'
 import ItemCard from '../components/ItemCard'
-import { products } from './../products.json'
+
 
 function Wishlist() {
-  const [wishlistItem, setWishListItem] = useState([])
-  const [allProduct, setAllProduct] = useState(products)
+  const [wishlistItem, setWishListItem] = useState(()=>{
+    return JSON.parse(localStorage.getItem('wishlist')) || []
+  })
 
 
 
-  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || []
   
   const addToCard = (product) => {
     
@@ -20,23 +20,23 @@ function Wishlist() {
       const cartItem={...product , quantity:1}
       const updateCart=[...cart , cartItem]
       localStorage.setItem('cart' , JSON.stringify(updateCart))
-
+window.dispatchEvent(new Event('cartUpdate'))
     }else {
         const allCart=cart.map(item => (
           item.id === product.id ? {...item , quantity:item.quantity + 1} : item
         ))
       localStorage.setItem('cart' , JSON.stringify(allCart))
-
+window.dispatchEvent(new Event('cartUpdate'))
     }
 
 
-  const findwishlistItem = wishlistItem.filter(item => item.id !== product.id)
-  setWishListItem(findwishlistItem)
-  const filterdWishlistItem=wishlist.filter(item => item.id !== product.id)
+
+  const filterdWishlistItem=wishlistItem.filter(item => item.id !== product.id)
+  setWishListItem(filterdWishlistItem)
   localStorage.setItem('wishlist' , JSON.stringify(filterdWishlistItem))
-
+  
   window.dispatchEvent(new Event('wishlistUpdate'))
-
+  
     
 
   }
@@ -56,13 +56,6 @@ function Wishlist() {
 
 
 
-
-
-  useEffect(() => {
-
-    setWishListItem(wishlist)
-
-  }, [])
 
   return (
     <>

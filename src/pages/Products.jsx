@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { products } from './../products.json'
 import Breadcrumb from '../components/BroadCamp'
 import Star from '../components/Star'
 import { toast, ToastContainer } from 'react-toastify'
-import { Link, useSearchParams } from 'react-router-dom'
+import {  useSearchParams } from 'react-router-dom'
 import ItemCard from '../components/ItemCard'
-
+import {Modal} from 'bootstrap'
 
 function Products() {
   const [modalwindow, setModalwindow] = useState({})
@@ -65,14 +65,14 @@ function Products() {
     const product = products.find(item => item.id === id)
     setModalwindow(product)
 
-    const modal = new bootstrap.Modal(document.getElementById('modalButtom'))
+    const modal=new Modal(document.getElementById('modalButtom'))
     modal.show()
   }
 
 
   const addToWishlist = (product) => {
     const existing = JSON.parse(localStorage.getItem('wishlist')) || []
-    const alreadyinWishlist = existing.find(item => item.id === product)
+    const alreadyinWishlist = existing.find(item => item.id === product.id)
 
     if (!alreadyinWishlist) {
       const wishlist = { ...product, quantity: 1 }
@@ -80,6 +80,7 @@ function Products() {
 
       localStorage.setItem('wishlist', JSON.stringify(updateWishlist))
       toast.success('your Product is adding to your wishlist')
+
     } else {
       toast.warning('the product is added ')
     }
@@ -104,6 +105,7 @@ function Products() {
         item.id === product.id ? { ...item, quantity: item.quantity + 1, total: item.total + 1 } : item
       ))
       localStorage.setItem('cart', JSON.stringify(newUpdate))
+      window.dispatchEvent(new Event('cartUpdate'))
 
 
     }

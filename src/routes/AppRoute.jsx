@@ -6,7 +6,6 @@ import Products from "../pages/Products";
 import Cart from "../components/Cart";
 import ProductDetails from "../pages/ProductDetails";
 import Wishlist from "../pages/Wishlist";
-import ItemCard from "../components/ItemCard";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 

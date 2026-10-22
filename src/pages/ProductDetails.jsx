@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import {useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from './../products.json';
 import Breadcrumb from '../components/BroadCamp';
@@ -23,26 +23,7 @@ export default function ProductDetails() {
   '/assets/products/cpu/cpu5.png'
   ]
 
-  const categoryImage={
-    cpu:[
-      product.image,
-         '/assets/products/cpu/cpu2.png',
-  '/assets/products/cpu/cpu3.png',
-  '/assets/products/cpu/cpu4.png',
-  '/assets/products/cpu/cpu5.png'
 
-    ],
-    game:[
-      product.image,
-      "/assets/products/game/game6.png",
-      "/assets/products/game/game7.png",
-      "/assets/products/game/game8.png",
-      "/assets/products/game/game9.png",
-      "/assets/products/game/game10.png",
-
-    ]
-  }
-const filtredCategory= categoryImage [product.category] ||[product.image]
 
 
   const addToCart =()=>{

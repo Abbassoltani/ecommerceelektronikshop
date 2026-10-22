@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import LanguageContext from '../context/LanguageContext'
@@ -22,7 +21,7 @@ function Register() {
             <div className="login-input-wrapper d-flex position-relative">
               <button className="btn-close position-absolute  " onClick={()=>{
                 // setShowLogin(false)
-                navigate(-1)
+                navigate('/')
               }}></button>
               <p className="text-muted">{translations[language].loginDes}</p>
               <h1 className='login-title'>{translations[language].loginRegisterWord}</h1>

@@ -1,5 +1,5 @@
 
-import React from 'react'
+
 import Star from './Star'
 import { Link } from 'react-router-dom';
 
@@ -10,11 +10,11 @@ function ItemCard({ products , onDetails , onWish , onCart , onModal}) {
     
     return (
         < >
-            <div className="global-cart  card  d-flex justify-content-center position-relative" >
+            <div className="global-cart  card  d-flex justify-content-center position-relative " >
 
-                <div className="p-3">
+                <div className="p-4 ">
 
-                    <div className="global-cart-wrapper p-2 position-relative overflow-hidden">
+                    <div className="global-cart-wrapper p-2 position-relative overflow-hidden ">
 
                         {products.isNew && (
                             <div className="badge-card-box position-absolute end-0">
