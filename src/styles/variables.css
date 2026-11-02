@@ -5,9 +5,14 @@
 :root {
     --white-color:#fff;
     --primary-color:#000;
-    --secondary-color:#6366B7;
+    --secondary-color:#015972;
     --bg-color:#F5E9F5;
     --secondary-bg-color:#DEE9FF;
+    --banner-color:#E4E5D0;
+    
+    --blue:#075b82;
+    --blue-more:#021666;
+    --gray:#3f4141;
 
 
     --card-color:rgb(48, 19, 236);

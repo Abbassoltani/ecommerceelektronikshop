@@ -1,5 +1,5 @@
 
-import {useState } from 'react'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from './../products.json';
 import Breadcrumb from '../components/BroadCamp';
@@ -12,45 +12,60 @@ export default function ProductDetails() {
   const [activeTab, setActiveTab] = useState('Descrioption')
   const [quantity, setQuantity] = useState(1)
   // const [mainImage , setMainImage]=useState(product.image)
-  const [activeImage , setActiveImage]=useState(product.image)
-    
+  const [activeImage, setActiveImage] = useState(product.image)
 
-  const galleryImage=[
-    product.image , 
-     '/assets/products/cpu/cpu2.png',
-  '/assets/products/cpu/cpu3.png',
-  '/assets/products/cpu/cpu4.png',
-  '/assets/products/cpu/cpu5.png'
+
+  const galleryImage = [
+    product.image,
+    '/assets/products/cpu/cpu2.png',
+    '/assets/products/cpu/cpu3.png',
+    '/assets/products/cpu/cpu4.png',
+    '/assets/products/cpu/cpu5.png'
   ]
 
 
 
 
-  const addToCart =()=>{
+  const addToCart = () => {
 
-    const existingCart=JSON.parse(localStorage.getItem('cart')) || []
-    const alreadyCart=existingCart.find(item => item.id === product.id)
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || []
+    const alreadyCart = existingCart.find(item => item.id === product.id)
 
-    if(!alreadyCart){
-      const newCart={...product , 
+    if (!alreadyCart) {
+      const newCart = {
+        ...product,
         quantity,
-        total:quantity
+        total: quantity
       }
-      const updatedCart=[...existingCart , newCart]
-      localStorage.setItem('cart' , JSON.stringify(updatedCart))
+      const updatedCart = [...existingCart, newCart]
+      localStorage.setItem('cart', JSON.stringify(updatedCart))
       window.dispatchEvent(new Event('cartUpdate'))
 
-    }else{
-      const newproductCart=existingCart.map(item => item.id === product.id ? {...item , quantity:quantity + 1} : item)
-      
-      localStorage.setItem('cart' , JSON.stringify(newproductCart))
+    } else {
+      const newproductCart = existingCart.map(item => item.id === product.id ? { ...item, quantity: quantity + 1 } : item)
+
+      localStorage.setItem('cart', JSON.stringify(newproductCart))
       window.dispatchEvent(new Event('cartUpdate'))
     }
 
 
   }
 
+  const addtoWishlist = () => {
 
+    const wishlist=JSON.parse(localStorage.getItem('wishlist')) || []
+    const isAlreadyWishlist=wishlist.find(item => item.id === product.id)
+    
+    if(!isAlreadyWishlist){
+      const wish={...product , quantity:1}
+      const updateWislist=[...wishlist, wish]
+      localStorage.setItem('wishlist', JSON.stringify(updateWislist))
+      window.dispatchEvent(new Event('wishlistUpdate'))
+      
+    }
+    
+  }
+  
 
 
 
@@ -67,15 +82,15 @@ export default function ProductDetails() {
           <div className="col-12 col-md-6 px-1">
             <div className="row align-items-center">
               <div className="col-md-2 d-none d-md-flex flex-column ">
-       {galleryImage.map(pic => (
-        <img src={pic} key={pic}alt=""
-          className={activeImage === pic ? 'active-image' : ''}
-        
-        onClick={()=>{
-          // setMainImage(pic)
-          setActiveImage(pic)
-        }} />
-       ))}
+                {galleryImage.map(pic => (
+                  <img src={pic} key={pic} alt=""
+                    className={activeImage === pic ? 'active-image' : ''}
+
+                    onClick={() => {
+                      // setMainImage(pic)
+                      setActiveImage(pic)
+                    }} />
+                ))}
               </div>
               <div className="col-12 col-md-10">
                 <img src={activeImage} alt="" />
@@ -127,19 +142,19 @@ export default function ProductDetails() {
             <div className="pdqauntity my-3 d-flex gap-5">
               <span className="pdquantity-title ">Quantity</span>
               <div className="pdquantity-wrapper">
-                <span onClick={()=>{
-                  if(quantity > 1){
-                    setQuantity(quantity -1)
+                <span onClick={() => {
+                  if (quantity > 1) {
+                    setQuantity(quantity - 1)
                   }
                 }}><i className="ri-subtract-line" ></i></span>
                 <span>{quantity}</span>
-                <span onClick={()=>setQuantity( quantity+1)}><i className="ri-add-line"></i></span>
+                <span onClick={() => setQuantity(quantity + 1)}><i className="ri-add-line"></i></span>
               </div>
 
             </div>
             <div className="pdbuttom my-4">
               <button className="btn btn-primary" onClick={addToCart}><i class="ri-luggage-cart-line" ></i>Add to Cart</button>
-              <button className="btn"><i class="ri-heart-line"></i>Add to Wishlist</button>
+              <button className="btn" onClick={addtoWishlist}><i class="ri-heart-line"></i>Add to Wishlist</button>
             </div>
             <div className="pbicon d-flex gap-3">
               <div className="pbicon-box d-flex align-items-center gap-3">

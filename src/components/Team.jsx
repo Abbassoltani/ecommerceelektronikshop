@@ -8,8 +8,11 @@ function Team({name , position, img}) {
                         <img src={img} alt="" />
 
                         </div>
+                        <div className="team-title-box">
+
                         <span className="team-name d-block">{name}</span>
                         <span className="team-job ">{position}</span>
+                        </div>
                     </div>
                 </div>
     </>

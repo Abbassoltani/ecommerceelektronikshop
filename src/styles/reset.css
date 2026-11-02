@@ -32,3 +32,21 @@ img {
     max-width: 100%;
 }
 
+.container-fluid {
+    background: var(--banner-color);
+}
+
+.span-underline {
+    width: 40px;
+    height: 5px;
+    background-color: var(--card-botton-color);
+    display: block;
+}
+
+
+.custum-divider {
+    width: 1px;
+    height: 65px !important;
+    background-color: black;
+    flex-shrink: 1;
+}

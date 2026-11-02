@@ -12,7 +12,7 @@ function ItemCard({ products , onDetails , onWish , onCart , onModal}) {
         < >
             <div className="global-cart  card  d-flex justify-content-center position-relative " >
 
-                <div className="p-4 ">
+                <div className="p-2 ">
 
                     <div className="global-cart-wrapper p-2 position-relative overflow-hidden ">
 
@@ -27,7 +27,7 @@ function ItemCard({ products , onDetails , onWish , onCart , onModal}) {
                         <img src={products.image} alt="" className='img-fluid' />
                     </div>
                     <Link to={`/products/${products.id}`}>
-                    <div className="card-title " onClick={()=>onDetails(products.id)}><h4>{products.name}</h4> </div>
+                    <div className="card-title " onClick={()=>onDetails(products.id)}><h5>{products.name}</h5> </div>
                     
                     </Link>
                     <div className="card-title-model ">Model:<h6> {products.brand}</h6> </div>
