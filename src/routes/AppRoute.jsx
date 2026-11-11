@@ -8,6 +8,9 @@ import ProductDetails from "../pages/ProductDetails";
 import Wishlist from "../pages/Wishlist";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Category from "../pages/Category";
+
+
 
 
 
@@ -22,6 +25,10 @@ const routes=useRoutes([
         {path:'wishlist' , element:<Wishlist/>},
         {path:'/login' , element:<Login/>},
         {path:'/register' , element:<Register/>},
+        {path:'/category' , element:<Category/>},
+       
+  
+       
        
 
     ]}

@@ -1,18 +1,26 @@
-import { Link } from "react-router-dom"
+
+
+import useStorefront from "../context/useStorefront"
+
 
 function AboutUs() {
+    const {t} = useStorefront()
+   
+    
+    
     return (
         <>
             <div className="about-section my-5 p-3 text-center text-lg-start">
+                
 
                 <div className="row w-100 justify-content-center align-items-center">
                     <div className=" col-12 col-md-12 col-lg-6">
                         <div className="about-img w-100 h-100 overflow-hidden">
-                            <img src="/public/assets/aboutus.png" alt="" />
+                            <img src="assets/aboutus.png" alt="" />
                         </div>
                     </div>
                     <div className="about-right col-12 col-md-12 col-lg-6">
-                        <h1 className="aboutus-title">About <span>Us</span></h1>
+                        <h1 className="aboutus-title">{t('aboutUs','title')} <span>{t('uns' , 'title')}</span></h1>
                         <span className="span-underline"></span>
 
 

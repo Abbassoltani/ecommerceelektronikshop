@@ -19,6 +19,7 @@ function Products() {
   const [searchParams, setSearchParams] = useSearchParams()
   const searchText = searchParams.get('q')
   const searchCategory = searchParams.get('category')
+  const searchMainCategory=searchParams.get('mainCategory')
 
 
   const globalSearch = products.filter(item =>
@@ -36,12 +37,25 @@ function Products() {
 
   const categorySort = [...new Set(products.map(item => item.category))]
 
-  const categoryFilter = searchCategory && searchCategory !== 'All Category' ?
-    globalSearch.filter(item => item.category === searchCategory) :
-    category === 'All Category' ? globalSearch
-      : globalSearch.filter(item => item.category === category)
-  // const categoryFilter = category === 'All Category' ? globalSearch
-  //   : globalSearch.filter(item => item.category === category)
+
+
+
+
+const mainCategoryFilter = searchMainCategory
+  ? globalSearch.filter(item => item.mainCategory === searchMainCategory)
+  : globalSearch
+
+const categoryFilter = searchCategory && searchCategory !== 'All Category'
+  ? mainCategoryFilter.filter(item => item.category === searchCategory)
+  : category === 'All Category'
+    ? mainCategoryFilter
+    : mainCategoryFilter.filter(item => item.category === category)
+
+
+
+
+
+
 
   const categortyBrand = [...new Set(categoryFilter.map(item => item.brand))]
   const categoryBrandFilter = brand === 'All Brand' ? categoryFilter
@@ -124,7 +138,7 @@ function Products() {
 
   return (
     <>
-      <Breadcrumb page='Product' />
+      <Breadcrumb page='Product'/>
       <ToastContainer
         position='top-center'
         autoClose={2000}

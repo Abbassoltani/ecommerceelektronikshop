@@ -144,10 +144,8 @@ function Navbar() {
                         <div className="navbar-nav d-flex justify-content-center w-100">
                             <ul className="navbar-nav" onClick={() => setIsMenuOpen(false)}>
                                 <li className="nav-item"><Link to="/" className="nav-link active">{translations[language].home}</Link></li>
-                                <li className="nav-item dropdown"><Link to="" className="nav-link dropdown-toggle">{translations[language].shop}</Link></li>
-                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].category}</Link></li>
+                                <li className="nav-item"><Link to="/category" className="nav-link">{translations[language].category}</Link></li>
                                 <li className="nav-item"><Link to="/products" className="nav-link">{translations[language].product}</Link></li>
-                                <li className="nav-item"><Link to="" className="nav-link">{translations[language].topDeal}</Link></li>
                             </ul>
                         </div>
                     </div>

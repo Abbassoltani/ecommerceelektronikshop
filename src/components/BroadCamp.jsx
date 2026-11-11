@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Breadcrumb({page}) {
   return (
     <>
-    <div className="breadcrumb m-0">
+    <div className="breadcrumb m-0 mt-sm-3 mt-md-0">
         <div className="container">
             <div className="breadcrumb__content">
                 <i className="fas fa-home breadcrumb__home-icon"></i>

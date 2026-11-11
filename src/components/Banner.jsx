@@ -1,6 +1,6 @@
-import React from 'react'
+
 import Counter from './Counter'
-function Banner({target}) {
+function Banner() {
   
   return (
     <>

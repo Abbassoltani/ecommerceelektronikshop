@@ -10,7 +10,7 @@ import AboutUs from '../components/AboutUs'
 import Team from '../components/Team'
 import Services from '../components/Services'
 import products from './../products.json'
-import FeatureCategory from '../components/FeatureCategory'
+
 import ItemCard from '../components/ItemCard'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
 
-  const [product, setProduct] = useState(products.products)
+  const [product] = useState(products.products)
 
   const teamGroup = [
     { name: 'Bernard Müller', position: 'Team Manager', img: '/assets/person1.png' },
@@ -143,7 +143,7 @@ function Home() {
 
       <div className="container showCase-container">
                   <div className="showcase position-relative">
-            <img src="/public/assets/banner6.png" alt="" />
+            <img src="/assets/banner6.png" alt="" />
             <Link to={findBannerPc ? `/products/${findBannerPc.id}` : '/products'} className='btn btn-danger showcase-font position-absolute'>
             Shop Now
             </Link>
@@ -197,7 +197,7 @@ function Home() {
               </div>
 
               <div className="col-12 col-md-3 featured-img">
-                <img src="./../../public/assets/featured.png " className='w-100 img-fluid' alt="" />
+                <img src="assets/featured.png " className='w-100 img-fluid' alt="" />
               </div>
             </div>
 
@@ -216,7 +216,7 @@ function Home() {
           </div>
 
           <div className="showcase position-relative">
-            <img src="/public/assets/banner5.png" alt="" />
+            <img src="assets/banner5.png" alt="" />
             <Link to={findBannerName ? `/products/${findBannerName.id}` : '/products'} className='btn btn-danger showcase-font position-absolute'>
             Shop Now
             </Link>
